@@ -1,0 +1,4 @@
+#Sat Oct 20 15:54:17 MMT 2018
+base.0=/mnt/50E83D73601923A1/Development/Android/N2Kanji/app/build/intermediates/transforms/dexMerger/debug/1
+path.0=classes.dex
+renamed.0=classes.dex

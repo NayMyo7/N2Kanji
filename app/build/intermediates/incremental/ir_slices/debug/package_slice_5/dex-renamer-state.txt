@@ -1,0 +1,4 @@
+#Sun Feb 17 15:35:50 MMT 2019
+base.0=/media/naymyo/Workspace/Android/N2Kanji/app/build/intermediates/transforms/dexMerger/debug/5
+path.0=classes.dex
+renamed.0=classes.dex
