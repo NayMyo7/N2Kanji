@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/kanji_wrapper"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="12dp"
-    android:layout_marginLeft="24dp"
-    android:layout_marginRight="24dp"
-    android:layout_marginTop="12dp">
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/tv_menu_kanji"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
         android:text="漢字"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-    
-</RelativeLayout>
+        android:textSize="20sp" />
+
+    <View
+        android:id="@+id/hr_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp" />
+
+
+</LinearLayout>

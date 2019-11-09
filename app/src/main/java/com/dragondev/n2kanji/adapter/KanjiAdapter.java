@@ -6,12 +6,17 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.dragondev.n2kanji.MainActivity;
 import com.dragondev.n2kanji.R;
 import com.dragondev.n2kanji.model.Kanji;
 
 import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * Created by Nay Myo Htet on 10/12/2018.
@@ -19,23 +24,24 @@ import java.util.List;
 
 public class KanjiAdapter extends RecyclerView.Adapter<KanjiAdapter.KanjiViewHolder> {
 
-    private Context context;
+    private Context mContext;
     private List<Kanji> mKanjiList;
     private int activePosition;
     private OnKanjiSelectedListener kanjiSelectedListener;
-    private Typeface typeface;
 
-
-    public KanjiAdapter(Context context, List<Kanji> mKanjiList, int activePosition, OnKanjiSelectedListener listener) {
-        this.context = context;
-        this.mKanjiList = mKanjiList;
+    public KanjiAdapter(Context context, List<Kanji> kanjiList, int activePosition, OnKanjiSelectedListener listener) {
+        this.mContext = context;
+        this.mKanjiList = kanjiList;
         this.activePosition = activePosition;
         this.kanjiSelectedListener = listener;
-        typeface = Typeface.createFromAsset(context.getAssets(), "fonts/Roboto.ttf");
     }
 
     public void setActivePosition(int activePosition) {
         this.activePosition = activePosition;
+    }
+
+    public int getActivePosition() {
+        return activePosition;
     }
 
     @Override
@@ -51,9 +57,13 @@ public class KanjiAdapter extends RecyclerView.Adapter<KanjiAdapter.KanjiViewHol
         holder.tvMenuKanji.setText(kanji.getKanji());
 
         if (activePosition == position) {
-            holder.tvMenuKanji.setTextColor(context.getResources().getColor(R.color.colorPrimaryDarker));
+            holder.tvMenuKanji.setTypeface(null, Typeface.BOLD);
+            holder.tvMenuKanji.setTextColor(mContext.getResources().getColor(R.color.colorPrimaryDarker));
+            holder.hrView.setBackgroundColor(mContext.getResources().getColor(R.color.redAccent));
         } else {
-            holder.tvMenuKanji.setTextColor(context.getResources().getColor(android.R.color.darker_gray));
+            holder.tvMenuKanji.setTextColor(mContext.getResources().getColor(R.color.light_gray));
+            holder.hrView.setBackgroundColor(mContext.getResources().getColor(R.color.colorTransparent));
+            holder.tvMenuKanji.setTypeface(null, Typeface.NORMAL);
         }
     }
 
@@ -65,28 +75,29 @@ public class KanjiAdapter extends RecyclerView.Adapter<KanjiAdapter.KanjiViewHol
 
     public class KanjiViewHolder extends RecyclerView.ViewHolder {
 
+        @BindView(R.id.kanji_wrapper)
+        LinearLayout kanjiWrapper;
+        @BindView(R.id.tv_menu_kanji)
         TextView tvMenuKanji;
-
-        private OnKanjiSelectedListener mCallback;
+        @BindView(R.id.hr_line)
+        View hrView;
 
         public KanjiViewHolder(View itemView, final OnKanjiSelectedListener kanjiSelectedListener) {
             super(itemView);
-            mCallback = kanjiSelectedListener;
 
-            tvMenuKanji = itemView.findViewById(R.id.tv_menu_kanji);
-            tvMenuKanji.setTypeface(typeface);
+            ButterKnife.bind(this, itemView);
 
-            tvMenuKanji.setOnClickListener(new View.OnClickListener() {
+            kanjiWrapper.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     activePosition = getAdapterPosition();
                     notifyDataSetChanged();
-                    // TODO notify word adapter to change content
+                    MainActivity.pref.setCurrentPosition(activePosition);
                     kanjiSelectedListener.onKanjiSelected(mKanjiList.get(activePosition));
                 }
             });
-        }
 
+        }
 
     }
 

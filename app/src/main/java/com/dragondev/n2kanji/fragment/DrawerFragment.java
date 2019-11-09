@@ -1,7 +1,6 @@
 package com.dragondev.n2kanji.fragment;
 
 
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -20,7 +19,8 @@ import android.widget.TextView;
 import com.dragondev.n2kanji.MainActivity;
 import com.dragondev.n2kanji.R;
 import com.dragondev.n2kanji.adapter.CustomExpandableListAdapter;
-import com.dragondev.n2kanji.utils.ExpandableListDataSource;
+import com.dragondev.n2kanji.utils.data.ExpandableListDataSource;
+import com.dragondev.n2kanji.utils.FuriganaUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +37,7 @@ public class DrawerFragment extends Fragment {
     TextView tv;
     TextPaint tp;
 
+
     ExpandableListView mExpandableListView;
     ExpandableListAdapter mExpandableListAdapter;
     List<String> mExpandableListTitle;
@@ -45,7 +46,6 @@ public class DrawerFragment extends Fragment {
     int lastExpandPosition = -1;
     int selectedIndex = 1;
     int mWeek = 0, mDay = 0, mPosition = 1;
-    SharedPreferences.Editor edit;
 
     private OnTapLesson onTapLesson;
 
@@ -71,7 +71,8 @@ public class DrawerFragment extends Fragment {
     }
 
 
-    public void setupDrawer(DrawerLayout drawer) {
+    public void setupDrawer(DrawerLayout drawer, Toolbar toolbar) {
+        tBar = toolbar;
         mDrawer = drawer;
         mToggle = new ActionBarDrawerToggle(getActivity(), mDrawer, tBar, R.string.drawer_open, R.string.drawer_close) {
             @Override
@@ -95,12 +96,12 @@ public class DrawerFragment extends Fragment {
             }
         });
 
-    /*    edit = MainActivity.pref.edit();
-        mWeek = MainActivity.pref.getInt("week", 1);
-        mDay = MainActivity.pref.getInt("day", 1);
-        mPosition = MainActivity.pref.getInt("position", 1);
-        selectedIndex = MainActivity.pref.getInt("index", 1);*/
-        // TODO SHOW KANJI LIST
+        mWeek = MainActivity.pref.getCurrentWeek();
+        mDay = MainActivity.pref.getCurrentDay();
+        mPosition = MainActivity.pref.getCurrentPosition();
+        selectedIndex = MainActivity.pref.getCurrentIndex();
+
+        setupTitle();
     }
 
     public void addDrawerItems() {
@@ -137,30 +138,50 @@ public class DrawerFragment extends Fragment {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
 
-                selectedIndex = parent.getFlatListPosition(ExpandableListView
-                        .getPackedPositionForChild(groupPosition, childPosition));
-                parent.setItemChecked(selectedIndex, true);
-
-//                edit.putInt("index", selectedIndex);
-
                 //Get mWeek and mDay for expandable list
                 mWeek = groupPosition + 1;
                 mDay = childPosition + 1;
 
-                onTapLesson.showSelectedLesson(mWeek, mDay);
+                if (mWeek == MainActivity.pref.getCurrentWeek() &&
+                        mDay == MainActivity.pref.getCurrentDay()) {
+                    mDrawer.closeDrawers();
+                    return false;
+                }
 
-            /*    edit.putInt("week", mWeek);
-                edit.putInt("day", mDay);
-                edit.commit();*/
-                // TODO SHOW KANJI LIST
+                selectedIndex = parent.getFlatListPosition(ExpandableListView
+                        .getPackedPositionForChild(groupPosition, childPosition));
+                parent.setItemChecked(selectedIndex, true);
+
+
+                MainActivity.pref.setCurrentIndex(selectedIndex);
+                MainActivity.pref.setCurrentPosition(0);
+
+
+                MainActivity.pref.setCurrentWeek(mWeek);
+                MainActivity.pref.setCurrentDay(mDay);
+
+                setupTitle();
+                onTapLesson.showSelectedLesson(mWeek, mDay, MainActivity.pref.getCurrentPosition());
+
                 mDrawer.closeDrawers();
                 return false;
             }
         });
     }
 
+    private void setupTitle() {
+        String mTitle = mExpandableListAdapter.getChild(mWeek - 1, mDay - 1).toString();
+        if (mDay == 1) {
+            mTitle = mTitle.substring(9, mTitle.length());
+        } else {
+            mTitle = mTitle.substring(8, mTitle.length());
+        }
+        mTitle = mWeek + "-" + mDay + " " + mTitle;
+        tBar.setTitle(FuriganaUtil.getOriginalText(mTitle));
+    }
+
     public interface OnTapLesson {
-        void showSelectedLesson(int week, int day);
+        void showSelectedLesson(int week, int day, int position);
     }
 
 }

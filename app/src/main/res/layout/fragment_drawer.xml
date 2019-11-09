@@ -3,16 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@android:color/white"
     android:orientation="vertical"
     tools:context=".fragment.DrawerFragment">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/navheader_height"
-        android:background="?attr/colorPrimaryDark"
-        android:orientation="vertical"
-        android:padding="@dimen/md_keylines"></LinearLayout>
+    <include layout="@layout/navheader" />
 
     <ExpandableListView
         android:id="@+id/nav_List"

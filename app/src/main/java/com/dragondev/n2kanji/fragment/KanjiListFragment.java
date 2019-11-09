@@ -1,6 +1,7 @@
 package com.dragondev.n2kanji.fragment;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -22,9 +23,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class KanjiListFragment extends Fragment implements KanjiAdapter.OnKanjiSelectedListener {
 
     @BindView(R.id.kanji_recycler_view)
@@ -37,6 +36,8 @@ public class KanjiListFragment extends Fragment implements KanjiAdapter.OnKanjiS
     private List<Kanji> kanjiList = new ArrayList<Kanji>();
 
     private OnTapKanji onTapKanji;
+
+    Handler idleHandler = new Handler();
 
     public KanjiListFragment() {
         // Required empty public constructor
@@ -57,6 +58,29 @@ public class KanjiListFragment extends Fragment implements KanjiAdapter.OnKanjiS
 
         kanjiRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
+        kanjiRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                idleHandler.removeCallbacksAndMessages(null);
+                super.onScrolled(recyclerView, dx, dy);
+            }
+
+            @Override
+            public void onScrollStateChanged(final RecyclerView recyclerView, int newState) {
+                if (newState == RecyclerView.SCROLL_STATE_IDLE) {
+
+                    idleHandler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            linearLayoutManager.smoothScrollToPosition(recyclerView, new RecyclerView.State(), kanjiAdapter.getActivePosition());
+                        }
+                    }, 1500);
+                }
+
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+        });
+
         return view;
     }
 
@@ -74,6 +98,7 @@ public class KanjiListFragment extends Fragment implements KanjiAdapter.OnKanjiS
 
     @Override
     public void onKanjiSelected(Kanji kanji) {
+        linearLayoutManager.smoothScrollToPosition(kanjiRecyclerView, new RecyclerView.State(), MainActivity.pref.getCurrentPosition());
         // send selected kanji to MainActivity
         onTapKanji.showSelectedKanji(kanji);
     }
@@ -93,7 +118,8 @@ public class KanjiListFragment extends Fragment implements KanjiAdapter.OnKanjiS
         if (isChanges) {
             kanjiAdapter.notifyDataSetChanged();
         }
-        kanjiAdapter.setActivePosition(0);
+        kanjiAdapter.setActivePosition(MainActivity.pref.getCurrentPosition());
+        linearLayoutManager.smoothScrollToPosition(kanjiRecyclerView, new RecyclerView.State(), MainActivity.pref.getCurrentPosition());
     }
 
     public interface OnTapKanji {

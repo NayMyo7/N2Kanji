@@ -1,53 +1,52 @@
 <resources>
     <string name="app_name">N2 Kanji</string>
-
-    <string name="action_settings">Settings</string>
+    <string name="version">Version 1.0.0</string>
 
     <string-array name="main_content">
-        <item>{第;だい}1{週;しゅう} {見;み}る1</item>
-        <item>{第;だい}2{週;しゅう} つかう1</item>
-        <item>{第;だい}3{週;しゅう} よむ1</item>
+        <item>{第;だい}1{週;しゅう} {見;み}る➀</item>
+        <item>{第;だい}2{週;しゅう} つかう➀</item>
+        <item>{第;だい}3{週;しゅう} よむ➀</item>
         <item>{第;だい}4{週;しゅう} かく</item>
-        <item>{第;だい}5{週;しゅう} つかう2</item>
-        <item>{第;だい}6{週;しゅう} みる2</item>
-        <item>{第;だい}7{週;しゅう} よむ2</item>
+        <item>{第;だい}5{週;しゅう} つかう②</item>
+        <item>{第;だい}6{週;しゅう} みる②</item>
+        <item>{第;だい}7{週;しゅう} よむ②</item>
         <item>{第;だい}8{週;しゅう} しる</item>
     </string-array>
 
     <string-array name="day1_content">
-        <item>1{日目;にちめ} {立;た}て{札;ふだ}.{注意書;ちゅういが}き</item>
+        <item>1{日目;にちめ} {立;た}て{札;ふだ}・{注意書;ちゅういが}き</item>
         <item>2{日目;かめ} {建物;たてもの}の{中;なか}でよく{見;み}る{表示;ひょうじ}</item>
         <item>3{日目;かめ} {建物;たてもの}の{内外;ないがい}でよく{見;み}る{表示;ひょうじ}</item>
         <item>4{日目;かめ} {駅;えき}でよく{見;み}る{表示;ひょうじ}</item>
         <item>5{日目;かめ} {乗;の}り{物;もの}でよく{見;み}る{表示;ひょうじ}</item>
-        <item>6{日目;かめ} {郵便局;ゆうびんきょく}.{病院;びょういん}で{見;み}る{表示;ひょうじ}</item>
-        <item>7{日目;かめ} {看板;かんばん}.{立;た}て{札;ふだ}.{表示;ひょうじ}</item>
+        <item>6{日目;かめ} {郵便局;ゆうびんきょく}・{病院;びょういん}で{見;み}る{表示;ひょうじ}</item>
+        <item>7{日目;かめ} {看板;かんばん}・{立;た}て{札;ふだ}・{表示;ひょうじ}</item>
     </string-array>
 
     <string-array name="day2_content">
         <item>1{日目;にちめ} {自動券売機;じどうけんばいき}</item>
         <item>2{日目;かめ} {現金自動支払機;げんきんじどうしはらいき}</item>
-        <item>3{日目;かめ} {自動販売機;じどうはんばいき}.{自動券売機;じどうけんばいき}</item>
+        <item>3{日目;かめ} {自動販売機;じどうはんばいき}・{自動券売機;じどうけんばいき}</item>
         <item>4{日目;かめ} {家電;かでん}のリモコン</item>
-        <item>5{日目;かめ} {電話;でんわ}.{携帯電話;けいたいでんわ}</item>
-        <item>6{日目;かめ} {携帯電話;けいたいでんわ}.パソコン</item>
-        <item>7{日目;かめ} {小人;こびと}＜＝＞{大人;おとな}</item>
+        <item>5{日目;かめ} {電話;でんわ}・{携帯電話;けいたいでんわ}</item>
+        <item>6{日目;かめ} {携帯電話;けいたいでんわ}・パソコン</item>
+        <item>7{日目;かめ} {小人;こびと} &lt;=&gt; {大人;おとな}</item>
     </string-array>
 
     <string-array name="day3_content">
-        <item>1{日目;にちめ} {料金通知;りょうきんつうち}.{払込用紙;はらいこみようかみ}</item>
+        <item>1{日目;にちめ} {料金通知;りょうきんつうち}・{払込用紙;はらいこみようかみ}</item>
         <item>2{日目;かめ} {不在通知;ふざいつうち}</item>
-        <item>3{日目;かめ} ポイントカード.{商品券;しょうひんけん}.クリーニング{預;あず}かり{票;ひょう}</item>
+        <item>3{日目;かめ} ポイントカード・{商品券;しょうひんけん}・クリーニング{預;あず}かり{票;ひょう}</item>
         <item>4{日目;かめ} ゴミの{分別;ぶんべつ}</item>
-        <item>5{日目;かめ} いろいろな{通知;つうち}1</item>
-        <item>6{日目;かめ} いろいろな{通知;つうち}2</item>
-        <item>7{日目;かめ} {記号的;きごうてき}な{感;かん}じ　{未;み}＜＝＞{済;ずみ}</item>
+        <item>5{日目;かめ} いろいろな{通知;つうち}➀</item>
+        <item>6{日目;かめ} いろいろな{通知;つうち}②</item>
+        <item>7{日目;かめ} {記号的;きごうてき}な{感;かん}じ　{未;み}⬄{済;ずみ}</item>
     </string-array>
 
     <string-array name="day4_content">
-        <item>1{日目;にちめ} {伝票;でんぴょう}.{申込書;もうしこみしょ}</item>
+        <item>1{日目;にちめ} {伝票;でんぴょう}・{申込書;もうしこみしょ}</item>
         <item>2{日目;かめ} {返事;へんじ}を{書;か}く</item>
-        <item>3{日目;かめ} メール.はがき</item>
+        <item>3{日目;かめ} メール・はがき</item>
         <item>4{日目;かめ} ビジネスメール</item>
         <item>5{日目;かめ} {答案用紙;とうあんようし}</item>
         <item>6{日目;かめ} {作文;さくぶん}</item>
@@ -55,9 +54,9 @@
     </string-array>
 
     <string-array name="day5_content">
-        <item>1{日目;にちめ} {家庭用品;かていようひん}（ポット.ヒーター）</item>
-        <item>2{日目;かめ} {家庭用品;かていようひん} {洗剤;せんざい}1</item>
-        <item>3{日目;かめ} {家庭用品;かていようひん} {洗剤;せんざい}2</item>
+        <item>1{日目;にちめ} {家庭用品;かていようひん}（ポット・ヒーター）</item>
+        <item>2{日目;かめ} {家庭用品;かていようひん} {洗剤;せんざい}➀</item>
+        <item>3{日目;かめ} {家庭用品;かていようひん} {洗剤;せんざい}②</item>
         <item>4{日目;かめ} {家庭用品;かていようひん} （{薬;くすり}）</item>
         <item>5{日目;かめ} {食品;しょくひん}</item>
         <item>6{日目;かめ} インターホン．パソコン</item>
@@ -65,19 +64,19 @@
     </string-array>
 
     <string-array name="day6_content">
-        <item>1{日目;にちめ} {広告;こうこく}.チラシ</item>
+        <item>1{日目;にちめ} {広告;こうこく}・チラシ</item>
         <item>2{日目;かめ} {折;お}り{込;こ}み{広告;こうこく}</item>
         <item>3{日目;かめ} {広告;こうこく}</item>
         <item>4{日目;かめ} {地図;ちず}</item>
-        <item>5日目;ひめ} {文化財;ぶんかざい}.{展示;てんじ}</item>
+        <item>5日目;ひめ} {文化財;ぶんかざい}・{展示;てんじ}</item>
         <item>6{日目;かめ} どっち？</item>
         <item>7{日目;かめ} {見;み}た{目;め}が{似;に}ている{漢字;かんじ}</item>
     </string-array>
 
     <string-array name="day7_content">
-        <item>1{日目;にちめ} {求人;きゅうじん}.{募集;ぼしゅう}</item>
-        <item>2{日目;かめ} {掲示板;けいじばん}.{地域新聞;ちいきしんぶん}</item>
-        <item>3{日目;かめ} メニュー.{成分表示;せいぶんひょうじ}</item>
+        <item>1{日目;にちめ} {求人;きゅうじん}・{募集;ぼしゅう}</item>
+        <item>2{日目;かめ} {掲示板;けいじばん}・{地域新聞;ちいきしんぶん}</item>
+        <item>3{日目;かめ} メニュー・{成分表示;せいぶんひょうじ}</item>
         <item>4{日目;かめ} {受験案内;じゅけんあんない}</item>
         <item>5{日目;かめ} {交通情報;こうつうじょうほう}</item>
         <item>6{日目;かめ} {気象情報;きしょうじょうほう}</item>
@@ -86,14 +85,46 @@
 
     <string-array name="day8_content">
         <item>1{日目;にちめ} {速報;そくほう}</item>
-        <item>2{日目;かめ} {見出;みだ}し1</item>
-        <item>3{日目;かめ} {見出;みだ}し2</item>
-        <item>4{日目;かめ} {記事;きじ}1</item>
-        <item>5{日目;かめ} {記事;きじ}2</item>
-        <item>6{日目;かめ} {記事;きじ}3</item>
-        <item>7{日目;かめ} {上回;うわまわ}る.{下回;したまわ}る</item>
+        <item>2{日目;かめ} {見出;みだ}し➀</item>
+        <item>3{日目;かめ} {見出;みだ}し②</item>
+        <item>4{日目;かめ} {記事;きじ}➀</item>
+        <item>5{日目;かめ} {記事;きじ}②</item>
+        <item>6{日目;かめ} {記事;きじ}➂</item>
+        <item>7{日目;かめ} {上回;うわまわ}る・{下回;したまわ}る</item>
     </string-array>
+
+    <string name="title_activity_search">Search</string>
+    <string name="title_activity_favourite">Favourite</string>
+    <string name="title_activity_about">About</string>
+
+    <string name="action_about">About</string>
+    <string name="action_search">Search</string>
+    <string name="action_favourite">Favourite</string>
 
     <string name="drawer_open">Drawer Open</string>
     <string name="drawer_close">Drawer Close</string>
+
+    <string name="header_app_name">日本語総まとめ\nN2漢字</string>
+
+    <string name="resource">Resource</string>
+    <string name="reference_book">日本語総まとめ N2漢字</string>
+
+    <string name="developer">Developer</string>
+    <string name="developer_name">Nay Myo Htet</string>
+    <string name="developer_email">nay.dragonboy@gmail.com</string>
+
+    <string name="thanks">Special thanks</string>
+    <string name="contributor_list">Sai Aike Sein\nEi Ei Chaw\nThae Nu Aung\nZin Maw Than</string>
+
+    <string name="library">Open source library</string>
+    <string name="library_list">
+        <a href="https://github.com/Rabbit-Converter/Rabbit">Rabbit Converter</a> (Zawgyi&lt;=&gt;Unicode)\n
+        <a href="https://github.com/googlei18n/myanmar-tools">Myanmar Tools</a> (Zawgyi detection)\n
+        <a href="https://github.com/JakeWharton/butterknife">Butter Knife</a>\n
+        <a href="https://github.com/sh0/furigana-view">FuriganaView</a> (Ruby TextView)\n
+        <a href="https://github.com/arimorty/floatingsearchview">Floating Search View</a>
+    </string>
+    <string name="copyright">Copyright ©2019 Home Dragon Development</string>
+
+
 </resources>
