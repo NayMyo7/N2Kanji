@@ -1,200 +1,368 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml:2:1-21:12
-MERGED from [com.android.support:design:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/a45f751b6cc6e1c1d5ce93219c0129f2/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:appcompat-v7:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d86aebecd7507c7d0286d2acb843ac3e/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/ed52aebe9faf271a6f7b4a8698110087/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:cardview-v7:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/c492012567dc5b37a1c755ec36a3aaec/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/naymyo/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/81b9c4de770c921cd29aea8a89e13bd5/AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:transition:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/7d9e1a95da1d5f83428234ed4061de07/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/84498f128e6b14af8dabc7180bc8b8c0/AndroidManifest.xml:17:1-31:12
-MERGED from [android.arch.lifecycle:extensions:1.1.1] /home/naymyo/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/7a1334f94765dc02b6fed84416a7354e/AndroidManifest.xml:17:1-30:12
-MERGED from [com.jakewharton:butterknife:8.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/butterknife-8.1.0.aar/e0a07b524cdd7d523bda2dfb372ffa38/AndroidManifest.xml:2:1-7:12
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/69c40cfc7004120e3269a6db3ef3874e/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/4ccba24038a590388c194abab1badfae/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-fragment:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/1d39a5fb4f99896cee2f1e90ac68897f/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-ui:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/07d5416e1d773e4fde5327a3ecbef95f/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-media-compat:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/8b2663ada5816f624f6275ec544aa530/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-utils:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/1a396de7e8c8dbdc9434c029b940c9a1/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-compat:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a4ff6c4d5b666c3822203baf9efe8aca/AndroidManifest.xml:17:1-31:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/naymyo/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/10130dd6824b63969e8a1ec9f2a05b8a/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/naymyo/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/a6f536c90c9a27f0b9c2dc47e6441479/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/naymyo/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/5bc226618c0daede1f5b976e78cc3a9a/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] /home/naymyo/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/9078289790055150987dd93279d97f82/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/naymyo/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/a9de16f28dbc4236231209e0398ea2f8/AndroidManifest.xml:17:1-22:12
-INJECTED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml:2:1-21:12
+ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:2:1-57:12
+MERGED from [com.github.arimorty:floatingsearchview:2.1.1] /Users/naymyohtet/.gradle/caches/transforms-3/872a976c29e67baf37d6070d5fc6e01f/transformed/jetified-floatingsearchview-2.1.1/AndroidManifest.xml:2:1-14:12
+MERGED from [com.google.android.material:material:1.11.0] /Users/naymyohtet/.gradle/caches/transforms-3/7078c37ce8cd3af2f2ed60babd87ea3b/transformed/material-1.11.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/naymyohtet/.gradle/caches/transforms-3/b906c92b55bd91e5bf8895139b074c94/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/17f345d3d1e2cd2162a910482c9c4110/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/6c6ffd2b5c140a59a107fe5eaa0e19c4/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] /Users/naymyohtet/.gradle/caches/transforms-3/d40b2ea55041f252cde380fe1f6b88b3/transformed/jetified-viewpager2-1.1.0-beta02/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] /Users/naymyohtet/.gradle/caches/transforms-3/118d266af7ee5cacff6f7699961eace4/transformed/recyclerview-1.3.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/42512a7caf028e9317b2be6c17950fd7/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.bartoszlipinski:viewpropertyobjectanimator:1.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/ddd86112a90b035c0fc48b6a083af953/transformed/jetified-viewpropertyobjectanimator-1.2.0/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/9dc5e9e358ef4b5577a23e8dc282a27b/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/108d777998642fa9fcd8a727b5538977/transformed/lifecycle-extensions-2.2.0/AndroidManifest.xml:17:1-27:12
+MERGED from [com.jakewharton:butterknife:8.1.0] /Users/naymyohtet/.gradle/caches/transforms-3/0ce63df74ae84c6467a58b3e2ef94535/transformed/jetified-butterknife-8.1.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/naymyohtet/.gradle/caches/transforms-3/a4935eb961c43a3f50f1289b494d54d9/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.8.0] /Users/naymyohtet/.gradle/caches/transforms-3/abe2f743de2fff7b00164988b5b2e5b8/transformed/jetified-activity-1.8.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/c29b3977202ec51311205242291f30c3/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/78e0f475248ccf690a14f03fa1cc16c2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/503df4cf52bb573d1f1e6e42630ac4bc/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/naymyohtet/.gradle/caches/transforms-3/efb1f4e56f313902f2a4eda4f51f44fa/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/naymyohtet/.gradle/caches/transforms-3/f3e35f94573bf9e824ef1039f0fdc6f4/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/66a9b9bdc87c18fb11b597309d6b6cd2/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/40ad7c28414d568bdcc3dc32a2c4fba7/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/naymyohtet/.gradle/caches/transforms-3/3f376514ddd3cc43dabb086f9161614a/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/naymyohtet/.gradle/caches/transforms-3/4cfdb71a7a96890303046998144402fb/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/4da25e0782bb15f0e7831049e4d108a9/transformed/media-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/ead40c03947223f719f3d16cf2d3c5e9/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/ecb422d9aaaa1831f918abce1fedd75e/transformed/jetified-customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/410071cbbfd8affa73dbbd4b9b3a06cc/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/naymyohtet/.gradle/caches/transforms-3/7643a128f5c47c435b19c12d356b61d2/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/ece2d8f0316386465e421f7f8a869ebe/transformed/jetified-lifecycle-service-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/e20e1fbd31487f46b59d06879321c31d/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/02f8c4d9710fa1de196e593c47f7a019/transformed/lifecycle-livedata-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/771eb5aebc4cd9eb6a704abe82159863/transformed/lifecycle-livedata-core-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/0895b8580acdb36c834699110ddf2372/transformed/lifecycle-viewmodel-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/8bee76aac8a18bbf8ab4ae28cce68473/transformed/lifecycle-runtime-2.6.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/83c177d303530dd6aab23ff3a49772bc/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/naymyohtet/.gradle/caches/transforms-3/128a8d6d81ce148076c0e04b032e0b3d/transformed/jetified-core-ktx-1.9.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/1c9d2182645e17962ad5523579bebbc8/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/26f38c8f689c679caf225efa7bd8e869/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] /Users/naymyohtet/.gradle/caches/transforms-3/dec0c51aa406ee3e706ba1dbe47ce5b1/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/f73b9a5230c367a24582ef74f44e13d6/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/45110000d506518165e89fdf7457dbab/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.9.0] /Users/naymyohtet/.gradle/caches/transforms-3/543740e42155bb89dcbd6bdda0f43b68/transformed/core-1.9.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/a0b2aca7a1c9b673f3c6daf1bf31ec75/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/naymyohtet/.gradle/caches/transforms-3/64c2e087164583eab9cad5ac57bc139d/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/naymyohtet/.gradle/caches/transforms-3/892b94bee70b3d7683fb77d96474e1e1/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/3975d2e53d6e7341a3887052044bd445/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/fce85ea2d6175bbb3c6ccf18c3952881/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/15cb24600e4bc7ba185939456c2315a6/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/daca5c2f225eebf374c4a0a9cf811d2d/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/9e19d3888f8fa3402174ebefe8e98afd/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/c1500460e04ad61a45f1d85b562c1cb9/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/b02c22c4fa0dd3a174542718e64ee1a1/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
 	package
-		ADDED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml:3:5-36
-		INJECTED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml
-		INJECTED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml
-		ADDED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml:2:1-21:12
-		INJECTED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml
-		ADDED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml:2:1-21:12
-		INJECTED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml:5:5-19:19
-MERGED from [com.android.support:design:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/a45f751b6cc6e1c1d5ce93219c0129f2/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:design:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/a45f751b6cc6e1c1d5ce93219c0129f2/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:appcompat-v7:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d86aebecd7507c7d0286d2acb843ac3e/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:appcompat-v7:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d86aebecd7507c7d0286d2acb843ac3e/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/ed52aebe9faf271a6f7b4a8698110087/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/ed52aebe9faf271a6f7b4a8698110087/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:cardview-v7:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/c492012567dc5b37a1c755ec36a3aaec/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:cardview-v7:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/c492012567dc5b37a1c755ec36a3aaec/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/naymyo/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/81b9c4de770c921cd29aea8a89e13bd5/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/naymyo/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/81b9c4de770c921cd29aea8a89e13bd5/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:transition:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/7d9e1a95da1d5f83428234ed4061de07/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:transition:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/7d9e1a95da1d5f83428234ed4061de07/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-v4:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/84498f128e6b14af8dabc7180bc8b8c0/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-v4:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/84498f128e6b14af8dabc7180bc8b8c0/AndroidManifest.xml:25:5-29:19
-MERGED from [android.arch.lifecycle:extensions:1.1.1] /home/naymyo/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/7a1334f94765dc02b6fed84416a7354e/AndroidManifest.xml:22:5-28:19
-MERGED from [android.arch.lifecycle:extensions:1.1.1] /home/naymyo/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/7a1334f94765dc02b6fed84416a7354e/AndroidManifest.xml:22:5-28:19
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/69c40cfc7004120e3269a6db3ef3874e/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/69c40cfc7004120e3269a6db3ef3874e/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/4ccba24038a590388c194abab1badfae/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/4ccba24038a590388c194abab1badfae/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-fragment:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/1d39a5fb4f99896cee2f1e90ac68897f/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/1d39a5fb4f99896cee2f1e90ac68897f/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-ui:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/07d5416e1d773e4fde5327a3ecbef95f/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-ui:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/07d5416e1d773e4fde5327a3ecbef95f/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/8b2663ada5816f624f6275ec544aa530/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/8b2663ada5816f624f6275ec544aa530/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/1a396de7e8c8dbdc9434c029b940c9a1/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/1a396de7e8c8dbdc9434c029b940c9a1/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a4ff6c4d5b666c3822203baf9efe8aca/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a4ff6c4d5b666c3822203baf9efe8aca/AndroidManifest.xml:25:5-29:19
+ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:4:5-55:19
+INJECTED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:4:5-55:19
+MERGED from [com.github.arimorty:floatingsearchview:2.1.1] /Users/naymyohtet/.gradle/caches/transforms-3/872a976c29e67baf37d6070d5fc6e01f/transformed/jetified-floatingsearchview-2.1.1/AndroidManifest.xml:12:5-20
+MERGED from [com.github.arimorty:floatingsearchview:2.1.1] /Users/naymyohtet/.gradle/caches/transforms-3/872a976c29e67baf37d6070d5fc6e01f/transformed/jetified-floatingsearchview-2.1.1/AndroidManifest.xml:12:5-20
+MERGED from [com.google.android.material:material:1.11.0] /Users/naymyohtet/.gradle/caches/transforms-3/7078c37ce8cd3af2f2ed60babd87ea3b/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.11.0] /Users/naymyohtet/.gradle/caches/transforms-3/7078c37ce8cd3af2f2ed60babd87ea3b/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/naymyohtet/.gradle/caches/transforms-3/b906c92b55bd91e5bf8895139b074c94/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/naymyohtet/.gradle/caches/transforms-3/b906c92b55bd91e5bf8895139b074c94/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/108d777998642fa9fcd8a727b5538977/transformed/lifecycle-extensions-2.2.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/108d777998642fa9fcd8a727b5538977/transformed/lifecycle-extensions-2.2.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/78e0f475248ccf690a14f03fa1cc16c2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/78e0f475248ccf690a14f03fa1cc16c2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/e20e1fbd31487f46b59d06879321c31d/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/e20e1fbd31487f46b59d06879321c31d/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.9.0] /Users/naymyohtet/.gradle/caches/transforms-3/543740e42155bb89dcbd6bdda0f43b68/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.9.0] /Users/naymyohtet/.gradle/caches/transforms-3/543740e42155bb89dcbd6bdda0f43b68/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/naymyohtet/.gradle/caches/transforms-3/64c2e087164583eab9cad5ac57bc139d/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/naymyohtet/.gradle/caches/transforms-3/64c2e087164583eab9cad5ac57bc139d/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/naymyohtet/.gradle/caches/transforms-3/892b94bee70b3d7683fb77d96474e1e1/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/naymyohtet/.gradle/caches/transforms-3/892b94bee70b3d7683fb77d96474e1e1/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.9.0] /Users/naymyohtet/.gradle/caches/transforms-3/543740e42155bb89dcbd6bdda0f43b68/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml:10:9-36
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:8:9-36
 	android:label
-		ADDED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml:8:9-41
-	android:roundIcon
-		ADDED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml:9:9-48
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:7:9-41
 	android:icon
-		ADDED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml:7:9-43
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:6:9-43
 	android:allowBackup
-		ADDED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:5:9-35
 	android:theme
-		ADDED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml:11:9-40
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:9:9-40
 activity#com.dragondev.n2kanji.MainActivity
-ADDED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml:12:9-18:20
-	android:name
-		ADDED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml:12:19-47
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml:13:13-17:29
-action#android.intent.action.MAIN
-ADDED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml:14:17-69
-	android:name
-		ADDED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml:14:25-66
-category#android.intent.category.LAUNCHER
-ADDED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml:16:17-77
-	android:name
-		ADDED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml:16:27-74
-uses-sdk
-INJECTED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml
-INJECTED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml
-MERGED from [com.android.support:design:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/a45f751b6cc6e1c1d5ce93219c0129f2/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:design:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/a45f751b6cc6e1c1d5ce93219c0129f2/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d86aebecd7507c7d0286d2acb843ac3e/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:appcompat-v7:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d86aebecd7507c7d0286d2acb843ac3e/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/ed52aebe9faf271a6f7b4a8698110087/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/ed52aebe9faf271a6f7b4a8698110087/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/c492012567dc5b37a1c755ec36a3aaec/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/c492012567dc5b37a1c755ec36a3aaec/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/naymyo/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/81b9c4de770c921cd29aea8a89e13bd5/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/naymyo/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/81b9c4de770c921cd29aea8a89e13bd5/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:transition:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/7d9e1a95da1d5f83428234ed4061de07/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/7d9e1a95da1d5f83428234ed4061de07/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/84498f128e6b14af8dabc7180bc8b8c0/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/84498f128e6b14af8dabc7180bc8b8c0/AndroidManifest.xml:21:5-23:54
-MERGED from [android.arch.lifecycle:extensions:1.1.1] /home/naymyo/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/7a1334f94765dc02b6fed84416a7354e/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:extensions:1.1.1] /home/naymyo/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/7a1334f94765dc02b6fed84416a7354e/AndroidManifest.xml:20:5-44
-MERGED from [com.jakewharton:butterknife:8.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/butterknife-8.1.0.aar/e0a07b524cdd7d523bda2dfb372ffa38/AndroidManifest.xml:5:5-43
-MERGED from [com.jakewharton:butterknife:8.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/butterknife-8.1.0.aar/e0a07b524cdd7d523bda2dfb372ffa38/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/69c40cfc7004120e3269a6db3ef3874e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/69c40cfc7004120e3269a6db3ef3874e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/4ccba24038a590388c194abab1badfae/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/4ccba24038a590388c194abab1badfae/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/1d39a5fb4f99896cee2f1e90ac68897f/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-fragment:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/1d39a5fb4f99896cee2f1e90ac68897f/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-ui:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/07d5416e1d773e4fde5327a3ecbef95f/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/07d5416e1d773e4fde5327a3ecbef95f/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-media-compat:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/8b2663ada5816f624f6275ec544aa530/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-media-compat:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/8b2663ada5816f624f6275ec544aa530/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-utils:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/1a396de7e8c8dbdc9434c029b940c9a1/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-utils:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/1a396de7e8c8dbdc9434c029b940c9a1/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a4ff6c4d5b666c3822203baf9efe8aca/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a4ff6c4d5b666c3822203baf9efe8aca/AndroidManifest.xml:21:5-23:58
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/naymyo/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/10130dd6824b63969e8a1ec9f2a05b8a/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/naymyo/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/10130dd6824b63969e8a1ec9f2a05b8a/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/naymyo/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/a6f536c90c9a27f0b9c2dc47e6441479/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/naymyo/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/a6f536c90c9a27f0b9c2dc47e6441479/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/naymyo/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/5bc226618c0daede1f5b976e78cc3a9a/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/naymyo/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/5bc226618c0daede1f5b976e78cc3a9a/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] /home/naymyo/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/9078289790055150987dd93279d97f82/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] /home/naymyo/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/9078289790055150987dd93279d97f82/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/naymyo/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/a9de16f28dbc4236231209e0398ea2f8/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/naymyo/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/a9de16f28dbc4236231209e0398ea2f8/AndroidManifest.xml:20:5-44
-INJECTED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml
-INJECTED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml
-	tools:overrideLibrary
-		ADDED from [com.android.support:design:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/a45f751b6cc6e1c1d5ce93219c0129f2/AndroidManifest.xml:23:9-59
-	android:targetSdkVersion
-		INJECTED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml
-		ADDED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml
-		INJECTED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml
-	android:minSdkVersion
-		INJECTED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml
-		ADDED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml
-		INJECTED from /media/naymyo/Workspace/Android/N2Kanji/app/src/main/AndroidManifest.xml
-meta-data#android.support.VERSION
-ADDED from [com.android.support:design:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/a45f751b6cc6e1c1d5ce93219c0129f2/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:appcompat-v7:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d86aebecd7507c7d0286d2acb843ac3e/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:appcompat-v7:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d86aebecd7507c7d0286d2acb843ac3e/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/ed52aebe9faf271a6f7b4a8698110087/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/ed52aebe9faf271a6f7b4a8698110087/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:cardview-v7:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/c492012567dc5b37a1c755ec36a3aaec/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:cardview-v7:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/c492012567dc5b37a1c755ec36a3aaec/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:transition:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/7d9e1a95da1d5f83428234ed4061de07/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:transition:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/7d9e1a95da1d5f83428234ed4061de07/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-v4:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/84498f128e6b14af8dabc7180bc8b8c0/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-v4:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/84498f128e6b14af8dabc7180bc8b8c0/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/69c40cfc7004120e3269a6db3ef3874e/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/69c40cfc7004120e3269a6db3ef3874e/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/4ccba24038a590388c194abab1badfae/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/4ccba24038a590388c194abab1badfae/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-fragment:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/1d39a5fb4f99896cee2f1e90ac68897f/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/1d39a5fb4f99896cee2f1e90ac68897f/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-ui:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/07d5416e1d773e4fde5327a3ecbef95f/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-ui:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/07d5416e1d773e4fde5327a3ecbef95f/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/8b2663ada5816f624f6275ec544aa530/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/8b2663ada5816f624f6275ec544aa530/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/1a396de7e8c8dbdc9434c029b940c9a1/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/1a396de7e8c8dbdc9434c029b940c9a1/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a4ff6c4d5b666c3822203baf9efe8aca/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a4ff6c4d5b666c3822203baf9efe8aca/AndroidManifest.xml:26:9-28:38
-	android:value
-		ADDED from [com.android.support:design:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/a45f751b6cc6e1c1d5ce93219c0129f2/AndroidManifest.xml:28:13-35
-	android:name
-		ADDED from [com.android.support:design:26.1.0] /home/naymyo/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/a45f751b6cc6e1c1d5ce93219c0129f2/AndroidManifest.xml:27:13-51
-provider#android.arch.lifecycle.ProcessLifecycleOwnerInitializer
-ADDED from [android.arch.lifecycle:extensions:1.1.1] /home/naymyo/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/7a1334f94765dc02b6fed84416a7354e/AndroidManifest.xml:23:9-27:43
-	android:authorities
-		ADDED from [android.arch.lifecycle:extensions:1.1.1] /home/naymyo/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/7a1334f94765dc02b6fed84416a7354e/AndroidManifest.xml:25:13-68
-	android:multiprocess
-		ADDED from [android.arch.lifecycle:extensions:1.1.1] /home/naymyo/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/7a1334f94765dc02b6fed84416a7354e/AndroidManifest.xml:27:13-40
+ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:11:9-21:20
+	android:screenOrientation
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:15:13-49
+	android:launchMode
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:13:13-48
 	android:exported
-		ADDED from [android.arch.lifecycle:extensions:1.1.1] /home/naymyo/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/7a1334f94765dc02b6fed84416a7354e/AndroidManifest.xml:26:13-37
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:14:13-36
 	android:name
-		ADDED from [android.arch.lifecycle:extensions:1.1.1] /home/naymyo/.gradle/caches/transforms-1/files-1.1/extensions-1.1.1.aar/7a1334f94765dc02b6fed84416a7354e/AndroidManifest.xml:24:13-83
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:12:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:16:13-20:29
+action#android.intent.action.MAIN
+ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:17:17-69
+	android:name
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:17:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:19:17-77
+	android:name
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:19:27-74
+activity#com.dragondev.n2kanji.activity.SearchActivity
+ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:23:9-31:20
+	android:screenOrientation
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:27:13-49
+	android:parentActivityName
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:26:13-55
+	android:label
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:25:13-58
+	android:name
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:24:13-52
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:28:13-30:49
+	android:value
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:30:17-46
+	android:name
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:29:17-63
+activity#com.dragondev.n2kanji.activity.FavouriteActivity
+ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:33:9-42:20
+	android:screenOrientation
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:37:13-49
+	android:parentActivityName
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:36:13-55
+	android:label
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:35:13-61
+	android:theme
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:38:13-56
+	android:name
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:34:13-55
+activity#com.dragondev.n2kanji.activity.AboutUsActivity
+ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:44:9-53:20
+	android:screenOrientation
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:48:13-49
+	android:parentActivityName
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:47:13-55
+	android:label
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:46:13-57
+	android:theme
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:49:13-56
+	android:name
+		ADDED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml:45:13-53
+uses-sdk
+INJECTED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml
+INJECTED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml
+MERGED from [com.github.arimorty:floatingsearchview:2.1.1] /Users/naymyohtet/.gradle/caches/transforms-3/872a976c29e67baf37d6070d5fc6e01f/transformed/jetified-floatingsearchview-2.1.1/AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.arimorty:floatingsearchview:2.1.1] /Users/naymyohtet/.gradle/caches/transforms-3/872a976c29e67baf37d6070d5fc6e01f/transformed/jetified-floatingsearchview-2.1.1/AndroidManifest.xml:8:5-10:41
+MERGED from [com.google.android.material:material:1.11.0] /Users/naymyohtet/.gradle/caches/transforms-3/7078c37ce8cd3af2f2ed60babd87ea3b/transformed/material-1.11.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.11.0] /Users/naymyohtet/.gradle/caches/transforms-3/7078c37ce8cd3af2f2ed60babd87ea3b/transformed/material-1.11.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/naymyohtet/.gradle/caches/transforms-3/b906c92b55bd91e5bf8895139b074c94/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/naymyohtet/.gradle/caches/transforms-3/b906c92b55bd91e5bf8895139b074c94/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/17f345d3d1e2cd2162a910482c9c4110/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/17f345d3d1e2cd2162a910482c9c4110/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/6c6ffd2b5c140a59a107fe5eaa0e19c4/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/6c6ffd2b5c140a59a107fe5eaa0e19c4/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] /Users/naymyohtet/.gradle/caches/transforms-3/d40b2ea55041f252cde380fe1f6b88b3/transformed/jetified-viewpager2-1.1.0-beta02/AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] /Users/naymyohtet/.gradle/caches/transforms-3/d40b2ea55041f252cde380fe1f6b88b3/transformed/jetified-viewpager2-1.1.0-beta02/AndroidManifest.xml:5:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] /Users/naymyohtet/.gradle/caches/transforms-3/118d266af7ee5cacff6f7699961eace4/transformed/recyclerview-1.3.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] /Users/naymyohtet/.gradle/caches/transforms-3/118d266af7ee5cacff6f7699961eace4/transformed/recyclerview-1.3.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/42512a7caf028e9317b2be6c17950fd7/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/42512a7caf028e9317b2be6c17950fd7/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.bartoszlipinski:viewpropertyobjectanimator:1.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/ddd86112a90b035c0fc48b6a083af953/transformed/jetified-viewpropertyobjectanimator-1.2.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.bartoszlipinski:viewpropertyobjectanimator:1.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/ddd86112a90b035c0fc48b6a083af953/transformed/jetified-viewpropertyobjectanimator-1.2.0/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/9dc5e9e358ef4b5577a23e8dc282a27b/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/9dc5e9e358ef4b5577a23e8dc282a27b/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/108d777998642fa9fcd8a727b5538977/transformed/lifecycle-extensions-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/108d777998642fa9fcd8a727b5538977/transformed/lifecycle-extensions-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.jakewharton:butterknife:8.1.0] /Users/naymyohtet/.gradle/caches/transforms-3/0ce63df74ae84c6467a58b3e2ef94535/transformed/jetified-butterknife-8.1.0/AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.1.0] /Users/naymyohtet/.gradle/caches/transforms-3/0ce63df74ae84c6467a58b3e2ef94535/transformed/jetified-butterknife-8.1.0/AndroidManifest.xml:5:5-43
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/naymyohtet/.gradle/caches/transforms-3/a4935eb961c43a3f50f1289b494d54d9/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/naymyohtet/.gradle/caches/transforms-3/a4935eb961c43a3f50f1289b494d54d9/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.8.0] /Users/naymyohtet/.gradle/caches/transforms-3/abe2f743de2fff7b00164988b5b2e5b8/transformed/jetified-activity-1.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.0] /Users/naymyohtet/.gradle/caches/transforms-3/abe2f743de2fff7b00164988b5b2e5b8/transformed/jetified-activity-1.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/c29b3977202ec51311205242291f30c3/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/c29b3977202ec51311205242291f30c3/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/78e0f475248ccf690a14f03fa1cc16c2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/78e0f475248ccf690a14f03fa1cc16c2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/503df4cf52bb573d1f1e6e42630ac4bc/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/503df4cf52bb573d1f1e6e42630ac4bc/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/naymyohtet/.gradle/caches/transforms-3/efb1f4e56f313902f2a4eda4f51f44fa/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/naymyohtet/.gradle/caches/transforms-3/efb1f4e56f313902f2a4eda4f51f44fa/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/naymyohtet/.gradle/caches/transforms-3/f3e35f94573bf9e824ef1039f0fdc6f4/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/naymyohtet/.gradle/caches/transforms-3/f3e35f94573bf9e824ef1039f0fdc6f4/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/66a9b9bdc87c18fb11b597309d6b6cd2/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/66a9b9bdc87c18fb11b597309d6b6cd2/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/40ad7c28414d568bdcc3dc32a2c4fba7/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/40ad7c28414d568bdcc3dc32a2c4fba7/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/naymyohtet/.gradle/caches/transforms-3/3f376514ddd3cc43dabb086f9161614a/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/naymyohtet/.gradle/caches/transforms-3/3f376514ddd3cc43dabb086f9161614a/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/naymyohtet/.gradle/caches/transforms-3/4cfdb71a7a96890303046998144402fb/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/naymyohtet/.gradle/caches/transforms-3/4cfdb71a7a96890303046998144402fb/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/4da25e0782bb15f0e7831049e4d108a9/transformed/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/4da25e0782bb15f0e7831049e4d108a9/transformed/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/ead40c03947223f719f3d16cf2d3c5e9/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/ead40c03947223f719f3d16cf2d3c5e9/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/ecb422d9aaaa1831f918abce1fedd75e/transformed/jetified-customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/ecb422d9aaaa1831f918abce1fedd75e/transformed/jetified-customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.loader:loader:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/410071cbbfd8affa73dbbd4b9b3a06cc/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/410071cbbfd8affa73dbbd4b9b3a06cc/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/naymyohtet/.gradle/caches/transforms-3/7643a128f5c47c435b19c12d356b61d2/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/naymyohtet/.gradle/caches/transforms-3/7643a128f5c47c435b19c12d356b61d2/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/ece2d8f0316386465e421f7f8a869ebe/transformed/jetified-lifecycle-service-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/ece2d8f0316386465e421f7f8a869ebe/transformed/jetified-lifecycle-service-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/e20e1fbd31487f46b59d06879321c31d/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/e20e1fbd31487f46b59d06879321c31d/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/02f8c4d9710fa1de196e593c47f7a019/transformed/lifecycle-livedata-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/02f8c4d9710fa1de196e593c47f7a019/transformed/lifecycle-livedata-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/771eb5aebc4cd9eb6a704abe82159863/transformed/lifecycle-livedata-core-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/771eb5aebc4cd9eb6a704abe82159863/transformed/lifecycle-livedata-core-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/0895b8580acdb36c834699110ddf2372/transformed/lifecycle-viewmodel-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/0895b8580acdb36c834699110ddf2372/transformed/lifecycle-viewmodel-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/8bee76aac8a18bbf8ab4ae28cce68473/transformed/lifecycle-runtime-2.6.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/8bee76aac8a18bbf8ab4ae28cce68473/transformed/lifecycle-runtime-2.6.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/83c177d303530dd6aab23ff3a49772bc/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/83c177d303530dd6aab23ff3a49772bc/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/naymyohtet/.gradle/caches/transforms-3/128a8d6d81ce148076c0e04b032e0b3d/transformed/jetified-core-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/naymyohtet/.gradle/caches/transforms-3/128a8d6d81ce148076c0e04b032e0b3d/transformed/jetified-core-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/1c9d2182645e17962ad5523579bebbc8/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/1c9d2182645e17962ad5523579bebbc8/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/26f38c8f689c679caf225efa7bd8e869/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/26f38c8f689c679caf225efa7bd8e869/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] /Users/naymyohtet/.gradle/caches/transforms-3/dec0c51aa406ee3e706ba1dbe47ce5b1/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/naymyohtet/.gradle/caches/transforms-3/dec0c51aa406ee3e706ba1dbe47ce5b1/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/f73b9a5230c367a24582ef74f44e13d6/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/f73b9a5230c367a24582ef74f44e13d6/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/45110000d506518165e89fdf7457dbab/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/45110000d506518165e89fdf7457dbab/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.9.0] /Users/naymyohtet/.gradle/caches/transforms-3/543740e42155bb89dcbd6bdda0f43b68/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.9.0] /Users/naymyohtet/.gradle/caches/transforms-3/543740e42155bb89dcbd6bdda0f43b68/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/a0b2aca7a1c9b673f3c6daf1bf31ec75/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/a0b2aca7a1c9b673f3c6daf1bf31ec75/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/naymyohtet/.gradle/caches/transforms-3/64c2e087164583eab9cad5ac57bc139d/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/naymyohtet/.gradle/caches/transforms-3/64c2e087164583eab9cad5ac57bc139d/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/naymyohtet/.gradle/caches/transforms-3/892b94bee70b3d7683fb77d96474e1e1/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/naymyohtet/.gradle/caches/transforms-3/892b94bee70b3d7683fb77d96474e1e1/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/3975d2e53d6e7341a3887052044bd445/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/3975d2e53d6e7341a3887052044bd445/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/fce85ea2d6175bbb3c6ccf18c3952881/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/fce85ea2d6175bbb3c6ccf18c3952881/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/15cb24600e4bc7ba185939456c2315a6/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/15cb24600e4bc7ba185939456c2315a6/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/daca5c2f225eebf374c4a0a9cf811d2d/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/daca5c2f225eebf374c4a0a9cf811d2d/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/9e19d3888f8fa3402174ebefe8e98afd/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/naymyohtet/.gradle/caches/transforms-3/9e19d3888f8fa3402174ebefe8e98afd/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/c1500460e04ad61a45f1d85b562c1cb9/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/c1500460e04ad61a45f1d85b562c1cb9/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/b02c22c4fa0dd3a174542718e64ee1a1/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/b02c22c4fa0dd3a174542718e64ee1a1/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+	android:targetSdkVersion
+		INJECTED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/naymyohtet/Workspace/personal-endeavor/N2Kanji/app/src/main/AndroidManifest.xml
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/78e0f475248ccf690a14f03fa1cc16c2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/e20e1fbd31487f46b59d06879321c31d/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/e20e1fbd31487f46b59d06879321c31d/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/naymyohtet/.gradle/caches/transforms-3/892b94bee70b3d7683fb77d96474e1e1/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/naymyohtet/.gradle/caches/transforms-3/892b94bee70b3d7683fb77d96474e1e1/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/78e0f475248ccf690a14f03fa1cc16c2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/78e0f475248ccf690a14f03fa1cc16c2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/78e0f475248ccf690a14f03fa1cc16c2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/78e0f475248ccf690a14f03fa1cc16c2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/78e0f475248ccf690a14f03fa1cc16c2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/78e0f475248ccf690a14f03fa1cc16c2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/naymyohtet/.gradle/caches/transforms-3/78e0f475248ccf690a14f03fa1cc16c2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/e20e1fbd31487f46b59d06879321c31d/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/e20e1fbd31487f46b59d06879321c31d/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/naymyohtet/.gradle/caches/transforms-3/e20e1fbd31487f46b59d06879321c31d/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/naymyohtet/.gradle/caches/transforms-3/543740e42155bb89dcbd6bdda0f43b68/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] /Users/naymyohtet/.gradle/caches/transforms-3/543740e42155bb89dcbd6bdda0f43b68/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/naymyohtet/.gradle/caches/transforms-3/543740e42155bb89dcbd6bdda0f43b68/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+permission#com.dragondev.n2kanji.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/naymyohtet/.gradle/caches/transforms-3/543740e42155bb89dcbd6bdda0f43b68/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] /Users/naymyohtet/.gradle/caches/transforms-3/543740e42155bb89dcbd6bdda0f43b68/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/naymyohtet/.gradle/caches/transforms-3/543740e42155bb89dcbd6bdda0f43b68/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/naymyohtet/.gradle/caches/transforms-3/543740e42155bb89dcbd6bdda0f43b68/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/naymyohtet/.gradle/caches/transforms-3/543740e42155bb89dcbd6bdda0f43b68/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+uses-permission#com.dragondev.n2kanji.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/naymyohtet/.gradle/caches/transforms-3/543740e42155bb89dcbd6bdda0f43b68/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/naymyohtet/.gradle/caches/transforms-3/543740e42155bb89dcbd6bdda0f43b68/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/naymyohtet/.gradle/caches/transforms-3/7aa005dcbc43d74648b0b176c1b9ddb8/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92

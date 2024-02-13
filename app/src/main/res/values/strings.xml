@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">N2 Kanji</string>
-    <string name="version">Version 1.0.0</string>
+    <string name="version">Version 2.0.0</string>
 
     <string-array name="main_content">
         <item>{第;だい}1{週;しゅう} {見;み}る➀</item>

@@ -1,15 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 34
     defaultConfig {
         applicationId "com.dragondev.n2kanji"
         minSdkVersion 15
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        targetSdkVersion 34
+        versionCode 2
+        versionName "2.0"
         vectorDrawables.useSupportLibrary = true
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
     buildTypes {
         release {
@@ -17,21 +17,22 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    namespace 'com.dragondev.n2kanji'
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support:recyclerview-v7:26.1.0'
-    implementation 'com.android.support:cardview-v7:26.1.0'
-    implementation 'com.android.support:design:26.1.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     def lifecycle_version = "1.1.1"
 
     // ViewModel and LiveData
-    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
 
     //Butter Knife
     implementation 'com.jakewharton:butterknife:8.1.0'
@@ -42,6 +43,6 @@ dependencies {
     implementation 'com.github.arimorty:floatingsearchview:2.1.1'
 
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
