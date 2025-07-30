@@ -6,8 +6,8 @@ android {
         applicationId "com.dragondev.n2kanji"
         minSdkVersion 15
         targetSdkVersion 35
-        versionCode 2
-        versionName "2.0"
+        versionCode 3
+        versionName "3.0"
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
@@ -21,6 +21,11 @@ android {
         }
     }
     namespace 'com.dragondev.n2kanji'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildToolsVersion '35.0.0'
 }
 
 dependencies {
