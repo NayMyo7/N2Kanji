@@ -80,7 +80,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           bottomNavigationBar: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const AdBanner(),
+              const AdBanner(useSafeArea: false),
               BottomNavigationBar(
                 currentIndex: _tabIndex,
                 onTap: (index) => setState(() => _tabIndex = index),

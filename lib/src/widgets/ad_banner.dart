@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 class AdBanner extends StatefulWidget {
-  const AdBanner({super.key});
+  const AdBanner({super.key, this.useSafeArea = true});
+
+  final bool useSafeArea;
 
   @override
   State<AdBanner> createState() => _AdBannerState();
@@ -42,7 +44,7 @@ class _AdBannerState extends State<AdBanner> {
 
     _bannerAd = BannerAd(
       adUnitId: adUnitId,
-      size: AdSize.banner,
+      size: AdSize.banner, // Use standard banner (320x50) for minimal size
       request: const AdRequest(),
       listener: BannerAdListener(
         onAdLoaded: (ad) {
@@ -85,13 +87,14 @@ class _AdBannerState extends State<AdBanner> {
 
     debugPrint('AdBanner: Displaying banner ad');
 
-    return SafeArea(
-      top: false,
-      child: SizedBox(
-        width: _bannerAd!.size.width.toDouble(),
-        height: _bannerAd!.size.height.toDouble(),
-        child: AdWidget(ad: _bannerAd!),
-      ),
+    final adWidget = SizedBox(
+      width: _bannerAd!.size.width.toDouble(),
+      height: _bannerAd!.size.height.toDouble(),
+      child: AdWidget(ad: _bannerAd!),
     );
+
+    return widget.useSafeArea
+        ? SafeArea(top: false, child: adWidget)
+        : adWidget;
   }
 }
