@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../core/core.dart';
+import 'rate_app_dialog.dart';
 
 class AboutScreen extends StatelessWidget {
   const AboutScreen({super.key});
@@ -9,19 +10,18 @@ class AboutScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('About')),
-      body: Padding(
+      body: ListView(
         padding: const EdgeInsets.all(AppSizes.lg),
-        child: ListView(
-          children: [
-            const _AboutHeader(),
-            const SizedBox(height: AppSizes.lg),
-            _DeveloperSection(),
-            const SizedBox(height: AppSizes.lg),
-            _ResourceSection(),
-            const SizedBox(height: AppSizes.lg),
-            const _OpenSourceSection(),
-          ],
-        ),
+        children: const [
+          _AboutHeader(),
+          SizedBox(height: AppSizes.xl),
+          _DeveloperSection(),
+          SizedBox(height: AppSizes.lg),
+          _ResourceSection(),
+          SizedBox(height: AppSizes.lg),
+          _OpenSourceSection(),
+          SizedBox(height: AppSizes.xl),
+        ],
       ),
     );
   }
@@ -44,15 +44,37 @@ class _AboutHeader extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: AppSizes.md),
           Text(
             'N2 Kanji',
-            style: Theme.of(
-              context,
-            ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w900),
+            style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                  fontWeight: FontWeight.w700,
+                ),
           ),
           const SizedBox(height: AppSizes.xs),
-          Text('Version 3.0.0', style: Theme.of(context).textTheme.bodyMedium),
+          Text(
+            'Version 3.0.0',
+            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                  color: AppColors.textSecondary,
+                ),
+          ),
+          const SizedBox(height: AppSizes.lg),
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton.icon(
+              onPressed: () => RateAppDialog.show(context),
+              icon: const Icon(Icons.star, size: AppSizes.iconSizeSm),
+              label: const Text('Rate This App'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: AppColors.primary,
+                foregroundColor: AppColors.textOnPrimary,
+                padding: const EdgeInsets.symmetric(vertical: AppSizes.md),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(AppSizes.radiusSm),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
@@ -64,7 +86,7 @@ class _DeveloperSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _SectionCard(
+    return const _SectionCard(
       title: 'Developer',
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -74,7 +96,7 @@ class _DeveloperSection extends StatelessWidget {
             label: 'Name',
             value: 'Nay Myo Htet',
           ),
-          const SizedBox(height: AppSizes.sm),
+          SizedBox(height: AppSizes.md),
           _InfoRow(
             icon: Icons.email,
             label: 'Email',
@@ -91,7 +113,7 @@ class _ResourceSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _SectionCard(
+    return const _SectionCard(
       title: 'Resource',
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -101,7 +123,7 @@ class _ResourceSection extends StatelessWidget {
             label: 'Textbook',
             value: '日本語総まとめ N2 漢字',
           ),
-          const SizedBox(height: AppSizes.sm),
+          SizedBox(height: AppSizes.md),
           _InfoRow(
             icon: Icons.description,
             label: 'Publisher',
@@ -118,7 +140,7 @@ class _OpenSourceSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _SectionCard(
+    return const _SectionCard(
       title: 'Open Source',
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -128,13 +150,13 @@ class _OpenSourceSection extends StatelessWidget {
             subtitle: 'KanjiVG — CC BY-SA 3.0',
             url: 'https://github.com/KanjiVG/kanjivg',
           ),
-          const SizedBox(height: AppSizes.md),
+          SizedBox(height: AppSizes.lg),
           _ResourceItem(
             title: 'Kanji dictionary',
             subtitle: 'KANJIDIC2 — EDRDG',
             url: 'https://www.edrdg.org/wiki/index.php/KANJIDIC_Project',
           ),
-          const SizedBox(height: AppSizes.md),
+          SizedBox(height: AppSizes.lg),
           _ResourceItem(
             title: 'Example sentences',
             subtitle: 'Tatoeba Project — CC BY 2.0',
@@ -161,24 +183,22 @@ class _SectionCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColors.surface,
         borderRadius: BorderRadius.circular(AppSizes.radiusSm),
-        border: Border.all(color: AppColors.divider),
+        border: Border.all(color: AppColors.divider, width: 1),
       ),
-      child: Padding(
-        padding: const EdgeInsets.all(AppSizes.lg),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              title,
-              style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    fontWeight: FontWeight.w600,
-                    color: AppColors.primary,
-                  ),
-            ),
-            const SizedBox(height: AppSizes.md),
-            child,
-          ],
-        ),
+      padding: const EdgeInsets.all(AppSizes.lg),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            title,
+            style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                  fontWeight: FontWeight.w600,
+                  color: AppColors.primary,
+                ),
+          ),
+          const SizedBox(height: AppSizes.lg),
+          child,
+        ],
       ),
     );
   }
@@ -243,8 +263,8 @@ class _ResourceItem extends StatelessWidget {
       children: [
         Text(
           title,
-          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                fontWeight: FontWeight.w500,
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                fontWeight: FontWeight.w600,
                 color: AppColors.textPrimary,
               ),
         ),
