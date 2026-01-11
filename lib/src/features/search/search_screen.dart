@@ -65,17 +65,17 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                     autofocus: true,
                     textAlignVertical: TextAlignVertical.center,
                     style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                      fontWeight: FontWeight.w700,
-                    ),
+                          fontWeight: FontWeight.w700,
+                        ),
                     decoration: InputDecoration(
-                      hintText: 'Search…',
-                      hintStyle: Theme.of(context).textTheme.titleSmall
-                          ?.copyWith(
-                            color: Theme.of(
-                              context,
-                            ).colorScheme.onSurfaceVariant,
-                            fontWeight: FontWeight.w600,
-                          ),
+                      hintText: 'Search',
+                      hintStyle:
+                          Theme.of(context).textTheme.titleSmall?.copyWith(
+                                color: Theme.of(
+                                  context,
+                                ).colorScheme.onSurfaceVariant,
+                                fontWeight: FontWeight.w600,
+                              ),
                       border: InputBorder.none,
                       isCollapsed: true,
                     ),
@@ -136,9 +136,9 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                     Text(
                       'Filters',
                       style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                        fontWeight: FontWeight.w700,
-                        color: Theme.of(context).colorScheme.primary,
-                      ),
+                            fontWeight: FontWeight.w700,
+                            color: Theme.of(context).colorScheme.primary,
+                          ),
                     ),
                     const Spacer(),
                     // Shuffle button
@@ -226,34 +226,28 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
 
                 // Apply text search filter
                 if (_query.isNotEmpty) {
-                  filtered = filtered
-                      .where((w) {
-                        return w.kanji.toLowerCase().contains(_query) ||
-                            w.kana.toLowerCase().contains(_query) ||
-                            w.english.toLowerCase().contains(_query) ||
-                            w.meaning.toLowerCase().contains(_query);
-                      })
-                      .toList(growable: false);
+                  filtered = filtered.where((w) {
+                    return w.kanji.toLowerCase().contains(_query) ||
+                        w.kana.toLowerCase().contains(_query) ||
+                        w.english.toLowerCase().contains(_query) ||
+                        w.meaning.toLowerCase().contains(_query);
+                  }).toList(growable: false);
                 }
 
                 // Apply week filter
                 if (_selectedWeek != null) {
-                  filtered = filtered
-                      .where((w) {
-                        final week = ((w.day - 1) ~/ 7) + 1;
-                        return week == _selectedWeek;
-                      })
-                      .toList(growable: false);
+                  filtered = filtered.where((w) {
+                    final week = ((w.day - 1) ~/ 7) + 1;
+                    return week == _selectedWeek;
+                  }).toList(growable: false);
                 }
 
                 // Apply day filter
                 if (_selectedDay != null) {
-                  filtered = filtered
-                      .where((w) {
-                        final dayOfWeek = ((w.day - 1) % 7) + 1;
-                        return dayOfWeek == _selectedDay;
-                      })
-                      .toList(growable: false);
+                  filtered = filtered.where((w) {
+                    final dayOfWeek = ((w.day - 1) % 7) + 1;
+                    return dayOfWeek == _selectedDay;
+                  }).toList(growable: false);
                 }
 
                 // Apply favourites filter
@@ -291,7 +285,9 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                           const SizedBox(width: 6),
                           Text(
                             '${filtered.length} ${filtered.length == 1 ? 'word' : 'words'}',
-                            style: Theme.of(context).textTheme.labelMedium
+                            style: Theme.of(context)
+                                .textTheme
+                                .labelMedium
                                 ?.copyWith(
                                   fontWeight: FontWeight.w600,
                                   color: Theme.of(
@@ -442,11 +438,11 @@ class _FilterChip extends StatelessWidget {
             Text(
               label,
               style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                color: selected
-                    ? Theme.of(context).colorScheme.onPrimaryContainer
-                    : Theme.of(context).colorScheme.onSurface,
-                fontWeight: selected ? FontWeight.w700 : FontWeight.w600,
-              ),
+                    color: selected
+                        ? Theme.of(context).colorScheme.onPrimaryContainer
+                        : Theme.of(context).colorScheme.onSurface,
+                    fontWeight: selected ? FontWeight.w700 : FontWeight.w600,
+                  ),
             ),
             if (onClear != null) const SizedBox(width: 4),
             if (onClear != null)
