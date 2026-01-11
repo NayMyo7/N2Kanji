@@ -25,7 +25,10 @@ class _AdBannerState extends State<AdBanner> {
   void initState() {
     super.initState();
 
-    if (kIsWeb) return;
+    if (kIsWeb) {
+      debugPrint('AdBanner: Web platform detected, skipping ad initialization');
+      return;
+    }
 
     final testUnitId = switch (defaultTargetPlatform) {
       TargetPlatform.android => _testBannerUnitIdAndroid,
@@ -34,6 +37,8 @@ class _AdBannerState extends State<AdBanner> {
     };
 
     final adUnitId = kReleaseMode ? _releaseBannerUnitId : testUnitId;
+    debugPrint(
+        'AdBanner: Initializing with adUnitId: $adUnitId (releaseMode: $kReleaseMode)');
 
     _bannerAd = BannerAd(
       adUnitId: adUnitId,
@@ -43,9 +48,12 @@ class _AdBannerState extends State<AdBanner> {
         onAdLoaded: (ad) {
           if (!mounted) return;
           setState(() => _bannerLoaded = true);
+          debugPrint('AdBanner: Ad loaded successfully');
         },
         onAdFailedToLoad: (ad, error) {
           debugPrint('AdMob banner failed to load: $error');
+          debugPrint(
+              'AdBanner: Error code: ${error.code}, message: ${error.message}');
           ad.dispose();
           if (!mounted) return;
           setState(() {
@@ -66,7 +74,16 @@ class _AdBannerState extends State<AdBanner> {
   @override
   Widget build(BuildContext context) {
     if (kIsWeb) return const SizedBox.shrink();
-    if (_bannerAd == null || !_bannerLoaded) return const SizedBox.shrink();
+    if (_bannerAd == null) {
+      debugPrint('AdBanner: Banner ad is null');
+      return const SizedBox.shrink();
+    }
+    if (!_bannerLoaded) {
+      debugPrint('AdBanner: Banner not loaded yet');
+      return const SizedBox.shrink();
+    }
+
+    debugPrint('AdBanner: Displaying banner ad');
 
     return SafeArea(
       top: false,
