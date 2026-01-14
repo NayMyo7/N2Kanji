@@ -53,7 +53,7 @@ class _AboutHeader extends StatelessWidget {
           ),
           const SizedBox(height: AppSizes.xs),
           Text(
-            'Version 3.0.0',
+            'Version 4.0.0',
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                   color: AppColors.textSecondary,
                 ),

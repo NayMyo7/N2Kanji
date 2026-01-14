@@ -15,8 +15,10 @@ class _AdBannerState extends State<AdBanner> {
   BannerAd? _bannerAd;
   bool _bannerLoaded = false;
 
-  static const String _releaseBannerUnitId =
+  static const String _releaseBannerUnitIdAndroid =
       'ca-app-pub-8308156736791023/8516180965';
+  static const String _releaseBannerUnitIdIos =
+      'ca-app-pub-8308156736791023/2965073017';
 
   static const String _testBannerUnitIdAndroid =
       'ca-app-pub-3940256099942544/6300978111';
@@ -32,13 +34,19 @@ class _AdBannerState extends State<AdBanner> {
       return;
     }
 
+    final releaseUnitId = switch (defaultTargetPlatform) {
+      TargetPlatform.android => _releaseBannerUnitIdAndroid,
+      TargetPlatform.iOS => _releaseBannerUnitIdIos,
+      _ => _releaseBannerUnitIdAndroid,
+    };
+
     final testUnitId = switch (defaultTargetPlatform) {
       TargetPlatform.android => _testBannerUnitIdAndroid,
       TargetPlatform.iOS => _testBannerUnitIdIos,
       _ => _testBannerUnitIdAndroid,
     };
 
-    final adUnitId = kReleaseMode ? _releaseBannerUnitId : testUnitId;
+    final adUnitId = kReleaseMode ? releaseUnitId : testUnitId;
     debugPrint(
         'AdBanner: Initializing with adUnitId: $adUnitId (releaseMode: $kReleaseMode)');
 

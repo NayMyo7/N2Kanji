@@ -4,8 +4,11 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import 'src/app.dart';
 
-Future<void> main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  await MobileAds.instance.initialize();
+
+  // Initialize MobileAds asynchronously without blocking app startup
+  MobileAds.instance.initialize();
+
   runApp(const ProviderScope(child: MyApp()));
 }
