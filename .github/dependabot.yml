@@ -15,8 +15,7 @@ updates:
       - "NayMyo7"
     assignees:
       - "NayMyo7"
-    versioning-strategy: "increase-with-minor-patch"
-    auto-merge: true
+    versioning-strategy: "increase"
 
   # GitHub Actions dependencies
   - package-ecosystem: "github-actions"
@@ -29,5 +28,3 @@ updates:
     commit-message:
       prefix: "ci"
       include: "scope"
-    versioning-strategy: "increase-with-minor-patch"
-    auto-merge: true
