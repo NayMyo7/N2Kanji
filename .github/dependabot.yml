@@ -1,6 +1,6 @@
 version: 2
 updates:
-  # Dart / Flutter dependencies
+  # Flutter / Dart dependencies
   - package-ecosystem: "pub"
     directory: "/"
     schedule:
@@ -8,21 +8,26 @@ updates:
       day: "monday"
       time: "09:00"
     open-pull-requests-limit: 5
-    labels:
-      - "dependencies"
-      - "flutter"
     commit-message:
-      prefix: "deps"
-    ignore:
-      # Example: ignore major updates if you want stability
-      # - dependency-name: "*"
-      #   update-types: ["version-update:semver-major"]
+      prefix: "chore"
+      include: "scope"
+    reviewers:
+      - "NayMyo7"
+    assignees:
+      - "NayMyo7"
+    versioning-strategy: "increase-with-minor-patch"
+    auto-merge: true
 
-  # GitHub Actions (if you use CI/CD)
+  # GitHub Actions dependencies
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "monthly"
-    labels:
-      - "ci"
-      - "dependencies"
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+    versioning-strategy: "increase-with-minor-patch"
+    auto-merge: true
