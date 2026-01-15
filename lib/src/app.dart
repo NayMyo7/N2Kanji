@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp.router(
       title: 'N2 Kanji',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
         scaffoldBackgroundColor: AppColors.background,
