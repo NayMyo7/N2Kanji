@@ -1,0 +1,28 @@
+version: 2
+updates:
+  # Dart / Flutter dependencies
+  - package-ecosystem: "pub"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "flutter"
+    commit-message:
+      prefix: "deps"
+    ignore:
+      # Example: ignore major updates if you want stability
+      # - dependency-name: "*"
+      #   update-types: ["version-update:semver-major"]
+
+  # GitHub Actions (if you use CI/CD)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    labels:
+      - "ci"
+      - "dependencies"

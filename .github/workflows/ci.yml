@@ -1,0 +1,49 @@
+name: Flutter CI
+
+on:
+  push:
+    branches: [ "main", "develop" ]
+  pull_request:
+    branches: [ "main", "develop" ]
+
+jobs:
+  build:
+    name: Analyze & Test
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Set up Flutter
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.38.6"   # or: stable
+          channel: "stable"
+          cache: true
+
+      # 3. Verify Flutter installation
+      - name: Flutter doctor
+        run: flutter doctor -v
+
+      # 4. Get dependencies
+      - name: Install dependencies
+        run: flutter pub get
+
+      # 5. Run analyzer
+      - name: Run static analysis
+        run: flutter analyze
+
+      # 6. Run tests
+      - name: Run unit tests
+        run: flutter test --coverage
+
+      # 7. Upload coverage (optional)
+      - name: Upload coverage report
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage/
