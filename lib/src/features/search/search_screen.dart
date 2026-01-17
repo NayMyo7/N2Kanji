@@ -56,268 +56,274 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
       displayWords = List.from(displayWords)..shuffle();
     }
 
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: false,
-        titleSpacing: 0,
-        toolbarHeight: 72,
-        title: Padding(
-          padding: const EdgeInsets.only(right: AppSizes.lg),
-          child: Container(
-            height: 44,
-            padding: const EdgeInsets.symmetric(horizontal: AppSizes.md),
-            decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.surface,
-              borderRadius: BorderRadius.circular(10),
-              border: Border.all(
-                color: Theme.of(
-                  context,
-                ).colorScheme.primary.withValues(alpha: 0.35),
+    return GestureDetector(
+      behavior: HitTestBehavior.translucent,
+      onTap: () => FocusScope.of(context).unfocus(),
+      child: Scaffold(
+        appBar: AppBar(
+          centerTitle: false,
+          titleSpacing: 0,
+          toolbarHeight: 72,
+          title: Padding(
+            padding: const EdgeInsets.only(right: AppSizes.lg),
+            child: Container(
+              height: 44,
+              padding: const EdgeInsets.symmetric(horizontal: AppSizes.md),
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.surface,
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(
+                  color: Theme.of(
+                    context,
+                  ).colorScheme.primary.withValues(alpha: 0.35),
+                ),
               ),
-            ),
-            child: Row(
-              children: [
-                Icon(
-                  Icons.search,
-                  size: 22,
-                  color: Theme.of(context).colorScheme.primary,
-                ),
-                const SizedBox(width: 10),
-                Expanded(
-                  child: TextField(
-                    controller: _controller,
-                    autofocus: true,
-                    textAlignVertical: TextAlignVertical.center,
-                    style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                          fontWeight: FontWeight.w700,
-                        ),
-                    decoration: InputDecoration(
-                      hintText: 'Search',
-                      hintStyle:
-                          Theme.of(context).textTheme.titleSmall?.copyWith(
-                                color: Theme.of(
-                                  context,
-                                ).colorScheme.onSurfaceVariant,
-                                fontWeight: FontWeight.w600,
-                              ),
-                      border: InputBorder.none,
-                      isCollapsed: true,
-                    ),
-                    onChanged: (v) {
-                      setState(() => _query = v.trim().toLowerCase());
-                      _performSearch();
-                    },
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.search,
+                    size: 22,
+                    color: Theme.of(context).colorScheme.primary,
                   ),
-                ),
-                if (_query.isNotEmpty)
-                  IconButton(
-                    tooltip: 'Clear',
-                    visualDensity: VisualDensity.compact,
-                    padding: EdgeInsets.zero,
-                    constraints: const BoxConstraints.tightFor(
-                      width: 32,
-                      height: 32,
-                    ),
-                    onPressed: () {
-                      _controller.clear();
-                      setState(() => _query = '');
-                      _performSearch();
-                    },
-                    icon: Icon(
-                      Icons.close,
-                      size: 20,
-                      color: Theme.of(context).colorScheme.onSurfaceVariant,
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: TextField(
+                      controller: _controller,
+                      autofocus: false,
+                      textAlignVertical: TextAlignVertical.center,
+                      style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                            fontWeight: FontWeight.w700,
+                          ),
+                      decoration: InputDecoration(
+                        hintText: 'Search',
+                        hintStyle:
+                            Theme.of(context).textTheme.titleSmall?.copyWith(
+                                  color: Theme.of(
+                                    context,
+                                  ).colorScheme.onSurfaceVariant,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                        border: InputBorder.none,
+                        isCollapsed: true,
+                      ),
+                      onChanged: (v) {
+                        setState(() => _query = v.trim().toLowerCase());
+                        _performSearch();
+                      },
                     ),
                   ),
-              ],
+                  if (_query.isNotEmpty)
+                    IconButton(
+                      tooltip: 'Clear',
+                      visualDensity: VisualDensity.compact,
+                      padding: EdgeInsets.zero,
+                      constraints: const BoxConstraints.tightFor(
+                        width: 32,
+                        height: 32,
+                      ),
+                      onPressed: () {
+                        _controller.clear();
+                        setState(() => _query = '');
+                        _performSearch();
+                      },
+                      icon: Icon(
+                        Icons.close,
+                        size: 20,
+                        color: Theme.of(context).colorScheme.onSurfaceVariant,
+                      ),
+                    ),
+                ],
+              ),
             ),
           ),
         ),
-      ),
-      body: Column(
-        children: [
-          // Filters section
-          Container(
-            padding: const EdgeInsets.all(AppSizes.md),
-            decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.surface,
-              border: Border(
-                bottom: BorderSide(
-                  color: Theme.of(context).dividerColor,
-                  width: 1,
+        body: Column(
+          children: [
+            // Filters section
+            Container(
+              padding: const EdgeInsets.all(AppSizes.md),
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.surface,
+                border: Border(
+                  bottom: BorderSide(
+                    color: Theme.of(context).dividerColor,
+                    width: 1,
+                  ),
                 ),
               ),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // Filter label and actions row
-                Row(
-                  children: [
-                    Icon(
-                      Icons.filter_list,
-                      size: 18,
-                      color: Theme.of(context).colorScheme.primary,
-                    ),
-                    const SizedBox(width: 6),
-                    Text(
-                      'Filters',
-                      style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                            fontWeight: FontWeight.w700,
-                            color: Theme.of(context).colorScheme.primary,
-                          ),
-                    ),
-                    const Spacer(),
-                    // Shuffle button
-                    IconButton(
-                      tooltip: _shuffled ? 'Unshuffle' : 'Shuffle',
-                      visualDensity: VisualDensity.compact,
-                      icon: Icon(
-                        Icons.shuffle,
-                        size: 20,
-                        color: _shuffled
-                            ? Theme.of(context).colorScheme.primary
-                            : Theme.of(context).colorScheme.onSurfaceVariant,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Filter label and actions row
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.filter_list,
+                        size: 18,
+                        color: Theme.of(context).colorScheme.primary,
                       ),
-                      onPressed: () => setState(() => _shuffled = !_shuffled),
-                    ),
-                    // Clear all button
-                    if (_selectedWeek != null ||
-                        _selectedDay != null ||
-                        _favouritesOnly)
-                      TextButton.icon(
-                        onPressed: () {
-                          setState(() {
-                            _selectedWeek = null;
-                            _selectedDay = null;
-                            _favouritesOnly = false;
-                          });
+                      const SizedBox(width: 6),
+                      Text(
+                        'Filters',
+                        style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                              fontWeight: FontWeight.w700,
+                              color: Theme.of(context).colorScheme.primary,
+                            ),
+                      ),
+                      const Spacer(),
+                      // Shuffle button
+                      IconButton(
+                        tooltip: _shuffled ? 'Unshuffle' : 'Shuffle',
+                        visualDensity: VisualDensity.compact,
+                        icon: Icon(
+                          Icons.shuffle,
+                          size: 20,
+                          color: _shuffled
+                              ? Theme.of(context).colorScheme.primary
+                              : Theme.of(context).colorScheme.onSurfaceVariant,
+                        ),
+                        onPressed: () => setState(() => _shuffled = !_shuffled),
+                      ),
+                      // Clear all button
+                      if (_selectedWeek != null ||
+                          _selectedDay != null ||
+                          _favouritesOnly)
+                        TextButton.icon(
+                          onPressed: () {
+                            setState(() {
+                              _selectedWeek = null;
+                              _selectedDay = null;
+                              _favouritesOnly = false;
+                            });
+                            _performSearch();
+                          },
+                          icon: const Icon(Icons.clear_all, size: 16),
+                          label: const Text('Clear'),
+                          style: TextButton.styleFrom(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 8,
+                              vertical: 4,
+                            ),
+                            visualDensity: VisualDensity.compact,
+                          ),
+                        ),
+                    ],
+                  ),
+                  const SizedBox(height: AppSizes.sm),
+                  // Filter chips
+                  Wrap(
+                    spacing: AppSizes.sm,
+                    runSpacing: AppSizes.sm,
+                    children: [
+                      _FilterChip(
+                        icon: Icons.calendar_month,
+                        label: _selectedWeek == null
+                            ? 'Week'
+                            : 'Week $_selectedWeek',
+                        selected: _selectedWeek != null,
+                        onTap: () => _showWeekPicker(),
+                        onClear: _selectedWeek != null
+                            ? () {
+                                setState(() => _selectedWeek = null);
+                                _performSearch();
+                              }
+                            : null,
+                      ),
+                      _FilterChip(
+                        icon: Icons.today,
+                        label:
+                            _selectedDay == null ? 'Day' : 'Day $_selectedDay',
+                        selected: _selectedDay != null,
+                        onTap: () => _showDayPicker(),
+                        onClear: _selectedDay != null
+                            ? () {
+                                setState(() => _selectedDay = null);
+                                _performSearch();
+                              }
+                            : null,
+                      ),
+                      _FilterChip(
+                        icon: Icons.star,
+                        label: 'Favourites',
+                        selected: _favouritesOnly,
+                        onTap: () {
+                          setState(() => _favouritesOnly = !_favouritesOnly);
                           _performSearch();
                         },
-                        icon: const Icon(Icons.clear_all, size: 16),
-                        label: const Text('Clear'),
-                        style: TextButton.styleFrom(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 8,
-                            vertical: 4,
-                          ),
-                          visualDensity: VisualDensity.compact,
-                        ),
-                      ),
-                  ],
-                ),
-                const SizedBox(height: AppSizes.sm),
-                // Filter chips
-                Wrap(
-                  spacing: AppSizes.sm,
-                  runSpacing: AppSizes.sm,
-                  children: [
-                    _FilterChip(
-                      icon: Icons.calendar_month,
-                      label: _selectedWeek == null
-                          ? 'Week'
-                          : 'Week $_selectedWeek',
-                      selected: _selectedWeek != null,
-                      onTap: () => _showWeekPicker(),
-                      onClear: _selectedWeek != null
-                          ? () {
-                              setState(() => _selectedWeek = null);
-                              _performSearch();
-                            }
-                          : null,
-                    ),
-                    _FilterChip(
-                      icon: Icons.today,
-                      label: _selectedDay == null ? 'Day' : 'Day $_selectedDay',
-                      selected: _selectedDay != null,
-                      onTap: () => _showDayPicker(),
-                      onClear: _selectedDay != null
-                          ? () {
-                              setState(() => _selectedDay = null);
-                              _performSearch();
-                            }
-                          : null,
-                    ),
-                    _FilterChip(
-                      icon: Icons.star,
-                      label: 'Favourites',
-                      selected: _favouritesOnly,
-                      onTap: () {
-                        setState(() => _favouritesOnly = !_favouritesOnly);
-                        _performSearch();
-                      },
-                      onClear: _favouritesOnly
-                          ? () {
-                              setState(() => _favouritesOnly = false);
-                              _performSearch();
-                            }
-                          : null,
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          Expanded(
-            child: searchState.error != null
-                ? Center(child: Text(searchState.error.toString()))
-                : Column(
-                    children: [
-                      // Word count
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: AppSizes.md,
-                          vertical: AppSizes.sm,
-                        ),
-                        color: Theme.of(
-                          context,
-                        ).colorScheme.surfaceContainerHighest,
-                        child: Row(
-                          children: [
-                            Icon(
-                              Icons.list_alt,
-                              size: 16,
-                              color: Theme.of(
-                                context,
-                              ).colorScheme.onSurfaceVariant,
-                            ),
-                            const SizedBox(width: 6),
-                            Text(
-                              '${searchState.totalCount} ${searchState.totalCount == 1 ? 'word' : 'words'}',
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .labelMedium
-                                  ?.copyWith(
-                                    fontWeight: FontWeight.w600,
-                                    color: Theme.of(
-                                      context,
-                                    ).colorScheme.onSurfaceVariant,
-                                  ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Expanded(
-                        child: searchState.isEmpty && !searchState.isLoadingMore
-                            ? const Center(child: Text('No results.'))
-                            : PaginatedWordListView(
-                                words: displayWords,
-                                hasMore: searchState.hasMore && !_shuffled,
-                                isLoadingMore: searchState.isLoadingMore,
-                                onLoadMore: () => ref
-                                    .read(paginatedSearchProvider.notifier)
-                                    .loadMore(),
-                                emptyText: 'No results.',
-                                onWordLongPress: (word) =>
-                                    WordInfoSnackBar.show(context, word),
-                              ),
+                        onClear: _favouritesOnly
+                            ? () {
+                                setState(() => _favouritesOnly = false);
+                                _performSearch();
+                              }
+                            : null,
                       ),
                     ],
                   ),
-          ),
-        ],
+                ],
+              ),
+            ),
+            Expanded(
+              child: searchState.error != null
+                  ? Center(child: Text(searchState.error.toString()))
+                  : Column(
+                      children: [
+                        // Word count
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: AppSizes.md,
+                            vertical: AppSizes.sm,
+                          ),
+                          color: Theme.of(
+                            context,
+                          ).colorScheme.surfaceContainerHighest,
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.list_alt,
+                                size: 16,
+                                color: Theme.of(
+                                  context,
+                                ).colorScheme.onSurfaceVariant,
+                              ),
+                              const SizedBox(width: 6),
+                              Text(
+                                '${searchState.totalCount} ${searchState.totalCount == 1 ? 'word' : 'words'}',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .labelMedium
+                                    ?.copyWith(
+                                      fontWeight: FontWeight.w600,
+                                      color: Theme.of(
+                                        context,
+                                      ).colorScheme.onSurfaceVariant,
+                                    ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Expanded(
+                          child: searchState.isEmpty &&
+                                  !searchState.isLoadingMore
+                              ? const Center(child: Text('No results.'))
+                              : PaginatedWordListView(
+                                  words: displayWords,
+                                  hasMore: searchState.hasMore && !_shuffled,
+                                  isLoadingMore: searchState.isLoadingMore,
+                                  onLoadMore: () => ref
+                                      .read(paginatedSearchProvider.notifier)
+                                      .loadMore(),
+                                  emptyText: 'No results.',
+                                  onWordLongPress: (word) =>
+                                      WordInfoSnackBar.show(context, word),
+                                ),
+                        ),
+                      ],
+                    ),
+            ),
+          ],
+        ),
+        bottomNavigationBar: const AdBanner(),
       ),
-      bottomNavigationBar: const AdBanner(),
     );
   }
 
