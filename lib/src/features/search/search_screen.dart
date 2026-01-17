@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/core.dart';
-import '../../state/providers.dart';
 import '../../utils/word_info_snackbar.dart';
 import '../../widgets/widgets.dart';
+import 'search_providers.dart';
 
 class SearchScreen extends ConsumerStatefulWidget {
   const SearchScreen({super.key});
@@ -23,14 +23,38 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
   final _controller = TextEditingController();
 
   @override
+  void initState() {
+    super.initState();
+    // Load initial search results
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _performSearch();
+    });
+  }
+
+  @override
   void dispose() {
     _controller.dispose();
     super.dispose();
   }
 
+  void _performSearch() {
+    ref.read(paginatedSearchProvider.notifier).search(
+          query: _query.isEmpty ? null : _query,
+          week: _selectedWeek,
+          day: _selectedDay,
+          favouritesOnly: _favouritesOnly,
+        );
+  }
+
   @override
   Widget build(BuildContext context) {
-    final wordsAsync = ref.watch(wordStoreProvider);
+    final searchState = ref.watch(paginatedSearchProvider);
+
+    // Apply shuffle to results if enabled (client-side)
+    var displayWords = searchState.words;
+    if (_shuffled && displayWords.isNotEmpty) {
+      displayWords = List.from(displayWords)..shuffle();
+    }
 
     return Scaffold(
       appBar: AppBar(
@@ -79,8 +103,10 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                       border: InputBorder.none,
                       isCollapsed: true,
                     ),
-                    onChanged: (v) =>
-                        setState(() => _query = v.trim().toLowerCase()),
+                    onChanged: (v) {
+                      setState(() => _query = v.trim().toLowerCase());
+                      _performSearch();
+                    },
                   ),
                 ),
                 if (_query.isNotEmpty)
@@ -95,6 +121,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                     onPressed: () {
                       _controller.clear();
                       setState(() => _query = '');
+                      _performSearch();
                     },
                     icon: Icon(
                       Icons.close,
@@ -165,6 +192,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                             _selectedDay = null;
                             _favouritesOnly = false;
                           });
+                          _performSearch();
                         },
                         icon: const Icon(Icons.clear_all, size: 16),
                         label: const Text('Clear'),
@@ -192,7 +220,10 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                       selected: _selectedWeek != null,
                       onTap: () => _showWeekPicker(),
                       onClear: _selectedWeek != null
-                          ? () => setState(() => _selectedWeek = null)
+                          ? () {
+                              setState(() => _selectedWeek = null);
+                              _performSearch();
+                            }
                           : null,
                     ),
                     _FilterChip(
@@ -201,17 +232,25 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                       selected: _selectedDay != null,
                       onTap: () => _showDayPicker(),
                       onClear: _selectedDay != null
-                          ? () => setState(() => _selectedDay = null)
+                          ? () {
+                              setState(() => _selectedDay = null);
+                              _performSearch();
+                            }
                           : null,
                     ),
                     _FilterChip(
                       icon: Icons.star,
                       label: 'Favourites',
                       selected: _favouritesOnly,
-                      onTap: () =>
-                          setState(() => _favouritesOnly = !_favouritesOnly),
+                      onTap: () {
+                        setState(() => _favouritesOnly = !_favouritesOnly);
+                        _performSearch();
+                      },
                       onClear: _favouritesOnly
-                          ? () => setState(() => _favouritesOnly = false)
+                          ? () {
+                              setState(() => _favouritesOnly = false);
+                              _performSearch();
+                            }
                           : null,
                     ),
                   ],
@@ -220,98 +259,61 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
             ),
           ),
           Expanded(
-            child: wordsAsync.when(
-              data: (words) {
-                var filtered = words;
-
-                // Apply text search filter
-                if (_query.isNotEmpty) {
-                  filtered = filtered.where((w) {
-                    return w.kanji.toLowerCase().contains(_query) ||
-                        w.kana.toLowerCase().contains(_query) ||
-                        w.english.toLowerCase().contains(_query) ||
-                        w.meaning.toLowerCase().contains(_query);
-                  }).toList(growable: false);
-                }
-
-                // Apply week filter
-                if (_selectedWeek != null) {
-                  filtered = filtered.where((w) {
-                    final week = ((w.day - 1) ~/ 7) + 1;
-                    return week == _selectedWeek;
-                  }).toList(growable: false);
-                }
-
-                // Apply day filter
-                if (_selectedDay != null) {
-                  filtered = filtered.where((w) {
-                    final dayOfWeek = ((w.day - 1) % 7) + 1;
-                    return dayOfWeek == _selectedDay;
-                  }).toList(growable: false);
-                }
-
-                // Apply favourites filter
-                if (_favouritesOnly) {
-                  filtered = filtered
-                      .where((w) => w.isFavourite)
-                      .toList(growable: false);
-                }
-
-                // Apply shuffle
-                if (_shuffled) {
-                  filtered = List.from(filtered)..shuffle();
-                }
-
-                return Column(
-                  children: [
-                    // Word count
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: AppSizes.md,
-                        vertical: AppSizes.sm,
+            child: searchState.error != null
+                ? Center(child: Text(searchState.error.toString()))
+                : Column(
+                    children: [
+                      // Word count
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: AppSizes.md,
+                          vertical: AppSizes.sm,
+                        ),
+                        color: Theme.of(
+                          context,
+                        ).colorScheme.surfaceContainerHighest,
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.list_alt,
+                              size: 16,
+                              color: Theme.of(
+                                context,
+                              ).colorScheme.onSurfaceVariant,
+                            ),
+                            const SizedBox(width: 6),
+                            Text(
+                              '${searchState.totalCount} ${searchState.totalCount == 1 ? 'word' : 'words'}',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .labelMedium
+                                  ?.copyWith(
+                                    fontWeight: FontWeight.w600,
+                                    color: Theme.of(
+                                      context,
+                                    ).colorScheme.onSurfaceVariant,
+                                  ),
+                            ),
+                          ],
+                        ),
                       ),
-                      color: Theme.of(
-                        context,
-                      ).colorScheme.surfaceContainerHighest,
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.list_alt,
-                            size: 16,
-                            color: Theme.of(
-                              context,
-                            ).colorScheme.onSurfaceVariant,
-                          ),
-                          const SizedBox(width: 6),
-                          Text(
-                            '${filtered.length} ${filtered.length == 1 ? 'word' : 'words'}',
-                            style: Theme.of(context)
-                                .textTheme
-                                .labelMedium
-                                ?.copyWith(
-                                  fontWeight: FontWeight.w600,
-                                  color: Theme.of(
-                                    context,
-                                  ).colorScheme.onSurfaceVariant,
-                                ),
-                          ),
-                        ],
+                      Expanded(
+                        child: searchState.isEmpty && !searchState.isLoadingMore
+                            ? const Center(child: Text('No results.'))
+                            : PaginatedWordListView(
+                                words: displayWords,
+                                hasMore: searchState.hasMore && !_shuffled,
+                                isLoadingMore: searchState.isLoadingMore,
+                                onLoadMore: () => ref
+                                    .read(paginatedSearchProvider.notifier)
+                                    .loadMore(),
+                                emptyText: 'No results.',
+                                onWordLongPress: (word) =>
+                                    WordInfoSnackBar.show(context, word),
+                              ),
                       ),
-                    ),
-                    Expanded(
-                      child: WordListView(
-                        words: filtered,
-                        emptyText: 'No results.',
-                        onWordLongPress: (word) =>
-                            WordInfoSnackBar.show(context, word),
-                      ),
-                    ),
-                  ],
-                );
-              },
-              error: (e, st) => Center(child: Text(e.toString())),
-              loading: () => const Center(child: CircularProgressIndicator()),
-            ),
+                    ],
+                  ),
           ),
         ],
       ),
@@ -337,6 +339,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                 onTap: () {
                   Navigator.of(context).pop();
                   setState(() => _selectedWeek = week);
+                  _performSearch();
                 },
               );
             },
@@ -370,6 +373,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                 onTap: () {
                   Navigator.of(context).pop();
                   setState(() => _selectedDay = day);
+                  _performSearch();
                 },
               );
             },
