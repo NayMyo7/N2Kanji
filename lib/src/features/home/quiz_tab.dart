@@ -46,8 +46,7 @@ class _QuizTabState extends State<QuizTab> {
     Color scoreColor,
     String lottieAsset,
     String message,
-  })
-  _resultStyleForScore(int percent) {
+  }) _resultStyleForScore(int percent) {
     if (percent >= 90 && percent <= 100) {
       return (
         tier: 'Platinum',
@@ -129,7 +128,9 @@ class _QuizTabState extends State<QuizTab> {
                       Text(
                         style.message,
                         textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.headlineMedium
+                        style: Theme.of(context)
+                            .textTheme
+                            .headlineMedium
                             ?.copyWith(
                               fontWeight: FontWeight.w900,
                               color: Colors.black87,
@@ -139,27 +140,29 @@ class _QuizTabState extends State<QuizTab> {
                       Text(
                         '$percent% Score',
                         textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.displayMedium
-                            ?.copyWith(
-                              fontWeight: FontWeight.w900,
-                              color: const Color(0xFF10B981),
-                              letterSpacing: -1,
-                            ),
+                        style:
+                            Theme.of(context).textTheme.displayMedium?.copyWith(
+                                  fontWeight: FontWeight.w900,
+                                  color: const Color(0xFF10B981),
+                                  letterSpacing: -1,
+                                ),
                       ),
                       const SizedBox(height: AppSizes.lg),
                       Text(
                         'Quiz completed successfully.',
                         textAlign: TextAlign.center,
                         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                          fontWeight: FontWeight.w600,
-                          color: Colors.black87,
-                        ),
+                              fontWeight: FontWeight.w600,
+                              color: Colors.black87,
+                            ),
                       ),
                       const SizedBox(height: AppSizes.md),
                       RichText(
                         textAlign: TextAlign.center,
                         text: TextSpan(
-                          style: Theme.of(context).textTheme.bodyLarge
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyLarge
                               ?.copyWith(color: Colors.black87, height: 1.5),
                           children: [
                             const TextSpan(text: 'You attempt '),
@@ -236,17 +239,17 @@ class _QuizTabState extends State<QuizTab> {
           title: Text(
             'Restart quiz?',
             style: Theme.of(context).textTheme.titleLarge?.copyWith(
-              fontWeight: FontWeight.w700,
-              color: Theme.of(context).colorScheme.onSurface,
-            ),
+                  fontWeight: FontWeight.w700,
+                  color: Theme.of(context).colorScheme.onSurface,
+                ),
           ),
           content: Text(
             'Your current progress will be lost.',
             style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-              color: Theme.of(
-                context,
-              ).colorScheme.onSurface.withValues(alpha: 0.8),
-            ),
+                  color: Theme.of(
+                    context,
+                  ).colorScheme.onSurface.withValues(alpha: 0.8),
+                ),
           ),
           actions: [
             TextButton(
@@ -280,9 +283,9 @@ class _QuizTabState extends State<QuizTab> {
               child: Text(
                 'Restart',
                 style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                  fontWeight: FontWeight.w700,
-                  color: Colors.white,
-                ),
+                      fontWeight: FontWeight.w700,
+                      color: Colors.white,
+                    ),
               ),
             ),
           ],
@@ -484,9 +487,9 @@ class _QuizTabState extends State<QuizTab> {
                     Text(
                       'Question',
                       style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                        fontWeight: FontWeight.w700,
-                        color: Theme.of(context).colorScheme.primary,
-                      ),
+                            fontWeight: FontWeight.w700,
+                            color: Theme.of(context).colorScheme.primary,
+                          ),
                     ),
                     const SizedBox(height: 4),
                     RichText(
@@ -494,7 +497,9 @@ class _QuizTabState extends State<QuizTab> {
                         children: [
                           TextSpan(
                             text: '${_questionCount + 1}',
-                            style: Theme.of(context).textTheme.titleLarge
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleLarge
                                 ?.copyWith(
                                   fontWeight: FontWeight.w900,
                                   color: Theme.of(context).colorScheme.primary,
@@ -502,7 +507,9 @@ class _QuizTabState extends State<QuizTab> {
                           ),
                           TextSpan(
                             text: '/${widget.words.length}',
-                            style: Theme.of(context).textTheme.titleLarge
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleLarge
                                 ?.copyWith(
                                   fontWeight: FontWeight.w700,
                                   color: AppColors.textPrimary,
@@ -525,9 +532,9 @@ class _QuizTabState extends State<QuizTab> {
                       Text(
                         'Quiz Type',
                         style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                          fontWeight: FontWeight.w700,
-                          color: Theme.of(context).colorScheme.primary,
-                        ),
+                              fontWeight: FontWeight.w700,
+                              color: Theme.of(context).colorScheme.primary,
+                            ),
                       ),
                       const SizedBox(height: 4),
                       InkWell(
@@ -554,9 +561,11 @@ class _QuizTabState extends State<QuizTab> {
                                 _type == QuizType.kana
                                     ? 'Kana'
                                     : _type == QuizType.burmese
-                                    ? 'Burmese'
-                                    : 'English',
-                                style: Theme.of(context).textTheme.labelLarge
+                                        ? 'Burmese'
+                                        : 'English',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .labelLarge
                                     ?.copyWith(
                                       color: Theme.of(
                                         context,
@@ -620,17 +629,17 @@ class _QuizTabState extends State<QuizTab> {
                   Text(
                     prompt,
                     style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                      fontWeight: FontWeight.w700,
-                      color: Colors.black87,
-                    ),
+                          fontWeight: FontWeight.w700,
+                          color: Colors.black87,
+                        ),
                   ),
                   const SizedBox(height: AppSizes.radiusSm),
                   Text(
                     correct.kanji,
                     style: Theme.of(context).textTheme.displayMedium?.copyWith(
-                      fontWeight: FontWeight.w800,
-                      color: Colors.black87,
-                    ),
+                          fontWeight: FontWeight.w800,
+                          color: Colors.black87,
+                        ),
                   ),
                 ],
               ),
@@ -699,7 +708,9 @@ class _QuizTabState extends State<QuizTab> {
                           alignment: Alignment.center,
                           child: Text(
                             letter,
-                            style: Theme.of(context).textTheme.labelLarge
+                            style: Theme.of(context)
+                                .textTheme
+                                .labelLarge
                                 ?.copyWith(
                                   fontWeight: FontWeight.w900,
                                   color: badgeFg,
@@ -712,7 +723,9 @@ class _QuizTabState extends State<QuizTab> {
                             option,
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
-                            style: Theme.of(context).textTheme.labelLarge
+                            style: Theme.of(context)
+                                .textTheme
+                                .labelLarge
                                 ?.copyWith(
                                   fontWeight: FontWeight.w800,
                                   color: scheme.onSurface,
@@ -788,14 +801,12 @@ class _QuizTabState extends State<QuizTab> {
                   ),
                   onPressed: (_answered && !_showingResult)
                       ? () {
-                          setState(() {
-                            _questionCount += 1;
-                          });
                           if (_isLastQuestion) {
                             _finishQuiz();
                             return;
                           }
                           setState(() {
+                            _questionCount += 1;
                             _deckIndex += 1;
                           });
                           _newQuestion();
