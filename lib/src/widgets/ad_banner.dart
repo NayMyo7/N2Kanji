@@ -29,11 +29,6 @@ class _AdBannerState extends State<AdBanner> {
   void initState() {
     super.initState();
 
-    if (kIsWeb) {
-      debugPrint('AdBanner: Web platform detected, skipping ad initialization');
-      return;
-    }
-
     final releaseUnitId = switch (defaultTargetPlatform) {
       TargetPlatform.android => _releaseBannerUnitIdAndroid,
       TargetPlatform.iOS => _releaseBannerUnitIdIos,
@@ -83,7 +78,6 @@ class _AdBannerState extends State<AdBanner> {
 
   @override
   Widget build(BuildContext context) {
-    if (kIsWeb) return const SizedBox.shrink();
     if (_bannerAd == null) {
       debugPrint('AdBanner: Banner ad is null');
       return const SizedBox.shrink();

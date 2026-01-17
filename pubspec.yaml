@@ -126,16 +126,4 @@ flutter_launcher_icons:
   image_path: "assets/icons/app_icon.png"
   remove_alpha_ios: true
   min_sdk_android: 21 # android min sdk min:16, default 21
-  web:
-    generate: true
-    image_path: "assets/icons/app_icon.png"
-    background_color: "#FFFFFF"
-    theme_color: "#4F6D7A"
-  windows:
-    generate: true
-    image_path: "assets/icons/app_icon.png"
-    icon_size: 48 # min:48, max:256, default: 48
-  macos:
-    generate: true
-    image_path: "assets/icons/app_icon.png"
 
