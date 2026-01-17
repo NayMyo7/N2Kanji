@@ -1,3 +1,5 @@
+import '../../data/db/db_value_converters.dart';
+
 class Word {
   const Word({
     required this.wordId,
@@ -34,30 +36,16 @@ class Word {
     );
   }
 
-  static int _asInt(Object? value) {
-    if (value == null) return 0;
-    if (value is int) return value;
-    if (value is num) return value.toInt();
-    if (value is String) return int.tryParse(value) ?? 0;
-    return 0;
-  }
-
-  static String _asString(Object? value) {
-    if (value == null) return '';
-    if (value is String) return value;
-    return value.toString();
-  }
-
   factory Word.fromRow(Map<String, Object?> row) {
     return Word(
-      wordId: _asInt(row['ID']),
-      kanjiId: _asInt(row['KANJI_ID']),
-      day: _asInt(row['DAY']),
-      kanji: _asString(row['KANJI']),
-      kana: _asString(row['KANA']),
-      meaning: _asString(row['MEANING']),
-      english: _asString(row['ENGLISH']),
-      favourite: _asInt(row['FAVOURITE']),
+      wordId: DbValueConverter.toInt(row['ID']),
+      kanjiId: DbValueConverter.toInt(row['KANJI_ID']),
+      day: DbValueConverter.toInt(row['DAY']),
+      kanji: DbValueConverter.toStringValue(row['KANJI']),
+      kana: DbValueConverter.toStringValue(row['KANA']),
+      meaning: DbValueConverter.toStringValue(row['MEANING']),
+      english: DbValueConverter.toStringValue(row['ENGLISH']),
+      favourite: DbValueConverter.toInt(row['FAVOURITE']),
     );
   }
 }

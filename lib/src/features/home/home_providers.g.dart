@@ -41,7 +41,7 @@ final class KanjiListProvider extends $FunctionalProvider<
   }
 }
 
-String _$kanjiListHash() => r'e190346541008ad98393684a61ec46db9b3287a4';
+String _$kanjiListHash() => r'd550e39674bae47e2158eff9b011bab2f58b8a00';
 
 @ProviderFor(SelectedKanjiId)
 final selectedKanjiIdProvider = SelectedKanjiIdProvider._();
@@ -125,4 +125,4 @@ final class DayWordsProvider extends $FunctionalProvider<
   }
 }
 
-String _$dayWordsHash() => r'8d0dabc9471ff3276ce91a94b0a1f68c0a4ea55c';
+String _$dayWordsHash() => r'334993ba6ab47956ecb893d57471249138522f72';

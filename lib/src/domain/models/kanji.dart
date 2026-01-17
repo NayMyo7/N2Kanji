@@ -1,3 +1,5 @@
+import '../../data/db/db_value_converters.dart';
+
 class Kanji {
   const Kanji({
     required this.id,
@@ -13,27 +15,13 @@ class Kanji {
   final String onyomi;
   final String kunyomi;
 
-  static int _asInt(Object? value) {
-    if (value == null) return 0;
-    if (value is int) return value;
-    if (value is num) return value.toInt();
-    if (value is String) return int.tryParse(value) ?? 0;
-    return 0;
-  }
-
-  static String _asString(Object? value) {
-    if (value == null) return '';
-    if (value is String) return value;
-    return value.toString();
-  }
-
   factory Kanji.fromRow(Map<String, Object?> row) {
     return Kanji(
-      id: _asInt(row['ID']),
-      day: _asInt(row['DAY']),
-      kanji: _asString(row['KANJI']),
-      onyomi: _asString(row['ONYOMI']),
-      kunyomi: _asString(row['KUNYOMI']),
+      id: DbValueConverter.toInt(row['ID']),
+      day: DbValueConverter.toInt(row['DAY']),
+      kanji: DbValueConverter.toStringValue(row['KANJI']),
+      onyomi: DbValueConverter.toStringValue(row['ONYOMI']),
+      kunyomi: DbValueConverter.toStringValue(row['KUNYOMI']),
     );
   }
 }

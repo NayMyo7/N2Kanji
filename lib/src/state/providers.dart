@@ -62,27 +62,31 @@ class WordStore extends _$WordStore {
   }
 }
 
-final allWordsValueProvider = Provider<List<Word>?>((ref) {
+@riverpod
+List<Word>? allWordsValue(Ref ref) {
   return ref.watch(wordStoreProvider.select((v) => switch (v) {
         AsyncData(:final value) => value,
         _ => null,
       }));
-});
+}
 
-final favouriteWordsValueProvider = Provider<List<Word>>((ref) {
+@riverpod
+List<Word> favouriteWordsValue(Ref ref) {
   final words = ref.watch(allWordsValueProvider);
   if (words == null) return const <Word>[];
   return words.where((w) => w.isFavourite).toList(growable: false);
-});
+}
 
-final favouriteWordsProvider = Provider<AsyncValue<List<Word>>>((ref) {
+@riverpod
+AsyncValue<List<Word>> favouriteWords(Ref ref) {
   final all = ref.watch(wordStoreProvider);
   return all.whenData(
     (words) => words.where((w) => w.isFavourite).toList(growable: false),
   );
-});
+}
 
-final wordByIdProvider = Provider.family<AsyncValue<Word?>, int>((ref, wordId) {
+@riverpod
+AsyncValue<Word?> wordById(Ref ref, int wordId) {
   final all = ref.watch(wordStoreProvider);
   return all.whenData((words) {
     for (final w in words) {
@@ -90,9 +94,10 @@ final wordByIdProvider = Provider.family<AsyncValue<Word?>, int>((ref, wordId) {
     }
     return null;
   });
-});
+}
 
-final wordByIdValueProvider = Provider.family<Word?, int>((ref, wordId) {
+@riverpod
+Word? wordByIdValue(Ref ref, int wordId) {
   final words = ref.watch(wordStoreProvider.select((v) => switch (v) {
         AsyncData(:final value) => value,
         _ => null,
@@ -102,26 +107,22 @@ final wordByIdValueProvider = Provider.family<Word?, int>((ref, wordId) {
     if (w.wordId == wordId) return w;
   }
   return null;
-});
+}
 
-final wordsByKanjiProvider = Provider.family<AsyncValue<List<Word>>, int>((
-  ref,
-  kanjiId,
-) {
+@riverpod
+AsyncValue<List<Word>> wordsByKanji(Ref ref, int kanjiId) {
   final all = ref.watch(wordStoreProvider);
   return all.whenData(
     (words) => words.where((w) => w.kanjiId == kanjiId).toList(growable: false),
   );
-});
+}
 
-final wordsByKanjiValueProvider = Provider.family<List<Word>, int>((
-  ref,
-  kanjiId,
-) {
+@riverpod
+List<Word> wordsByKanjiValue(Ref ref, int kanjiId) {
   final words = ref.watch(allWordsValueProvider);
   if (words == null) return const <Word>[];
   return words.where((w) => w.kanjiId == kanjiId).toList(growable: false);
-});
+}
 
 class LessonSelectionData {
   const LessonSelectionData({
