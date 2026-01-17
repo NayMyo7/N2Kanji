@@ -1,27 +1,32 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../data/db/n2kanji_database.dart';
 import '../data/repositories/n2kanji_repository.dart';
 import '../domain/models/word.dart';
 
-final sharedPreferencesProvider = FutureProvider<SharedPreferences>((
-  ref,
-) async {
-  return SharedPreferences.getInstance();
-});
+part 'providers.g.dart';
 
-final databaseProvider = Provider<N2KanjiDatabase>((ref) {
+@riverpod
+Future<SharedPreferences> sharedPreferences(Ref ref) async {
+  return SharedPreferences.getInstance();
+}
+
+@riverpod
+N2KanjiDatabase database(Ref ref) {
   final db = N2KanjiDatabase();
   ref.onDispose(db.close);
   return db;
-});
+}
 
-final repositoryProvider = Provider<N2KanjiRepository>((ref) {
+@riverpod
+N2KanjiRepository repository(Ref ref) {
   return N2KanjiRepository(ref.watch(databaseProvider));
-});
+}
 
-class WordStoreNotifier extends AsyncNotifier<List<Word>> {
+@riverpod
+class WordStore extends _$WordStore {
   @override
   Future<List<Word>> build() async {
     return ref.watch(repositoryProvider).retrieveAllWord();
@@ -36,7 +41,10 @@ class WordStoreNotifier extends AsyncNotifier<List<Word>> {
       await repo.markFavourite(word.wordId);
     }
 
-    final current = state.valueOrNull;
+    final current = switch (state) {
+      AsyncData(:final value) => value,
+      _ => null,
+    };
     if (current == null) {
       state = AsyncData(await repo.retrieveAllWord());
       return;
@@ -54,12 +62,11 @@ class WordStoreNotifier extends AsyncNotifier<List<Word>> {
   }
 }
 
-final wordStoreProvider = AsyncNotifierProvider<WordStoreNotifier, List<Word>>(
-  WordStoreNotifier.new,
-);
-
 final allWordsValueProvider = Provider<List<Word>?>((ref) {
-  return ref.watch(wordStoreProvider.select((v) => v.valueOrNull));
+  return ref.watch(wordStoreProvider.select((v) => switch (v) {
+        AsyncData(:final value) => value,
+        _ => null,
+      }));
 });
 
 final favouriteWordsValueProvider = Provider<List<Word>>((ref) {
@@ -86,7 +93,10 @@ final wordByIdProvider = Provider.family<AsyncValue<Word?>, int>((ref, wordId) {
 });
 
 final wordByIdValueProvider = Provider.family<Word?, int>((ref, wordId) {
-  final words = ref.watch(wordStoreProvider.select((v) => v.valueOrNull));
+  final words = ref.watch(wordStoreProvider.select((v) => switch (v) {
+        AsyncData(:final value) => value,
+        _ => null,
+      }));
   if (words == null) return null;
   for (final w in words) {
     if (w.wordId == wordId) return w;
@@ -113,8 +123,8 @@ final wordsByKanjiValueProvider = Provider.family<List<Word>, int>((
   return words.where((w) => w.kanjiId == kanjiId).toList(growable: false);
 });
 
-class LessonSelection {
-  const LessonSelection({
+class LessonSelectionData {
+  const LessonSelectionData({
     required this.week,
     required this.day,
     required this.position,
@@ -126,8 +136,8 @@ class LessonSelection {
 
   int get dayOfCourse => (week - 1) * 7 + day;
 
-  LessonSelection copyWith({int? week, int? day, int? position}) {
-    return LessonSelection(
+  LessonSelectionData copyWith({int? week, int? day, int? position}) {
+    return LessonSelectionData(
       week: week ?? this.week,
       day: day ?? this.day,
       position: position ?? this.position,
@@ -135,15 +145,16 @@ class LessonSelection {
   }
 }
 
-class LessonSelectionNotifier extends AsyncNotifier<LessonSelection> {
+@riverpod
+class LessonSelection extends _$LessonSelection {
   static const _kWeek = 'WEEK';
   static const _kDay = 'DAY';
   static const _kPosition = 'POSITION';
 
   @override
-  Future<LessonSelection> build() async {
+  Future<LessonSelectionData> build() async {
     final prefs = await ref.watch(sharedPreferencesProvider.future);
-    return LessonSelection(
+    return LessonSelectionData(
       week: prefs.getInt(_kWeek) ?? 1,
       day: prefs.getInt(_kDay) ?? 1,
       position: prefs.getInt(_kPosition) ?? 0,
@@ -155,19 +166,14 @@ class LessonSelectionNotifier extends AsyncNotifier<LessonSelection> {
     await prefs.setInt(_kWeek, week);
     await prefs.setInt(_kDay, day);
     await prefs.setInt(_kPosition, 0);
-    state = AsyncData(LessonSelection(week: week, day: day, position: 0));
+    state = AsyncData(LessonSelectionData(week: week, day: day, position: 0));
   }
 
   Future<void> setPosition(int position) async {
     final prefs = await ref.watch(sharedPreferencesProvider.future);
     final current =
-        state.value ?? const LessonSelection(week: 1, day: 1, position: 0);
+        state.value ?? const LessonSelectionData(week: 1, day: 1, position: 0);
     await prefs.setInt(_kPosition, position);
     state = AsyncData(current.copyWith(position: position));
   }
 }
-
-final lessonSelectionProvider =
-    AsyncNotifierProvider<LessonSelectionNotifier, LessonSelection>(
-      LessonSelectionNotifier.new,
-    );

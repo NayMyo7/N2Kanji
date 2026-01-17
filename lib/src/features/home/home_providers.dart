@@ -1,15 +1,19 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../domain/models/kanji.dart';
 import '../../domain/models/word.dart';
 import '../../state/providers.dart';
 
-final kanjiListProvider = FutureProvider<List<Kanji>>((ref) async {
+part 'home_providers.g.dart';
+
+@riverpod
+Future<List<Kanji>> kanjiList(Ref ref) async {
   final selection = await ref.watch(lessonSelectionProvider.future);
   return ref.watch(repositoryProvider).retrieveKanji(selection.dayOfCourse);
-});
+}
 
-class SelectedKanjiIdNotifier extends AsyncNotifier<int?> {
+@riverpod
+class SelectedKanjiId extends _$SelectedKanjiId {
   static const _kPrefix = 'SELECTED_KANJI_ID_DAY_';
 
   @override
@@ -35,12 +39,8 @@ class SelectedKanjiIdNotifier extends AsyncNotifier<int?> {
   }
 }
 
-final selectedKanjiIdProvider =
-    AsyncNotifierProvider<SelectedKanjiIdNotifier, int?>(
-      SelectedKanjiIdNotifier.new,
-    );
-
-final dayWordsProvider = Provider<AsyncValue<List<Word>>>((ref) {
+@riverpod
+AsyncValue<List<Word>> dayWords(Ref ref) {
   final selection = ref.watch(lessonSelectionProvider);
   final all = ref.watch(wordStoreProvider);
 
@@ -54,4 +54,4 @@ final dayWordsProvider = Provider<AsyncValue<List<Word>>>((ref) {
     error: (e, st) => AsyncValue.error(e, st),
     loading: () => const AsyncValue.loading(),
   );
-});
+}

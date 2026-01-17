@@ -1,16 +1,20 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import 'word_examples_service.dart';
 
-final wordExamplesServiceProvider = Provider<WordExamplesService>((ref) {
-  return WordExamplesService();
-});
+part 'word_examples_provider.g.dart';
 
-final wordExamplesProvider =
-    FutureProvider.family<List<TatoebaExample>, ({String query, int limit})>((
-      ref,
-      params,
-    ) {
-      final service = ref.watch(wordExamplesServiceProvider);
-      return service.fetchExamples(query: params.query, limit: params.limit);
-    });
+@riverpod
+WordExamplesService wordExamplesService(Ref ref) {
+  return WordExamplesService();
+}
+
+@riverpod
+Future<List<TatoebaExample>> wordExamples(
+  Ref ref, {
+  required String query,
+  required int limit,
+}) {
+  final service = ref.watch(wordExamplesServiceProvider);
+  return service.fetchExamples(query: query, limit: limit);
+}

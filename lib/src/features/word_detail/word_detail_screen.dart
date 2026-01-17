@@ -32,9 +32,8 @@ class WordDetailScreen extends ConsumerWidget {
             icon: Icon(
               w.isFavourite ? Icons.star : Icons.star_border,
               size: 22,
-              color: w.isFavourite
-                  ? AppColors.favouriteActive
-                  : scheme.onSurface,
+              color:
+                  w.isFavourite ? AppColors.favouriteActive : scheme.onSurface,
             ),
           ),
           IconButton(
@@ -68,11 +67,11 @@ class WordDetailScreen extends ConsumerWidget {
                     child: Text(
                       w.kanji,
                       textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.headlineLarge
-                          ?.copyWith(
-                            fontWeight: FontWeight.w900,
-                            color: Colors.white,
-                          ),
+                      style:
+                          Theme.of(context).textTheme.headlineLarge?.copyWith(
+                                fontWeight: FontWeight.w900,
+                                color: Colors.white,
+                              ),
                     ),
                   ),
                 ),
@@ -85,7 +84,9 @@ class WordDetailScreen extends ConsumerWidget {
                         if (w.kana.trim().isNotEmpty)
                           Text(
                             w.kana,
-                            style: Theme.of(context).textTheme.titleMedium
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleMedium
                                 ?.copyWith(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w600,
@@ -97,7 +98,9 @@ class WordDetailScreen extends ConsumerWidget {
                             padding: const EdgeInsets.only(top: 12),
                             child: Text(
                               w.meaning,
-                              style: Theme.of(context).textTheme.titleMedium
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleMedium
                                   ?.copyWith(
                                     color: Colors.white.withValues(alpha: 0.9),
                                     fontWeight: FontWeight.w600,
@@ -110,7 +113,9 @@ class WordDetailScreen extends ConsumerWidget {
                             padding: const EdgeInsets.only(top: 6),
                             child: Text(
                               w.english,
-                              style: Theme.of(context).textTheme.titleMedium
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleMedium
                                   ?.copyWith(
                                     color: Colors.white.withValues(alpha: 0.9),
                                     fontWeight: FontWeight.w600,
@@ -193,8 +198,8 @@ class _KanjiRow extends StatelessWidget {
               child: Text(
                 literal,
                 style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                  fontWeight: FontWeight.w900,
-                ),
+                      fontWeight: FontWeight.w900,
+                    ),
               ),
             ),
             const SizedBox(width: AppSizes.md),
@@ -208,8 +213,8 @@ class _KanjiRow extends StatelessWidget {
                     Text(
                       meanings.join(', '),
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                        fontWeight: FontWeight.w600,
-                      ),
+                            fontWeight: FontWeight.w600,
+                          ),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -220,9 +225,9 @@ class _KanjiRow extends StatelessWidget {
                       child: Text(
                         on.join(' / '),
                         style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                          color: scheme.onSurfaceVariant,
-                          fontWeight: FontWeight.w600,
-                        ),
+                              color: scheme.onSurfaceVariant,
+                              fontWeight: FontWeight.w600,
+                            ),
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -234,9 +239,9 @@ class _KanjiRow extends StatelessWidget {
                       child: Text(
                         kun.join(' / '),
                         style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                          color: scheme.onSurfaceVariant,
-                          fontWeight: FontWeight.w600,
-                        ),
+                              color: scheme.onSurfaceVariant,
+                              fontWeight: FontWeight.w600,
+                            ),
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -277,9 +282,9 @@ class _Section extends StatelessWidget {
             child: Text(
               title,
               style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                fontWeight: FontWeight.w800,
-                color: Theme.of(context).colorScheme.onSurface,
-              ),
+                    fontWeight: FontWeight.w800,
+                    color: Theme.of(context).colorScheme.onSurface,
+                  ),
             ),
           ),
         ),
@@ -313,8 +318,8 @@ class _KanjiList extends StatelessWidget {
         child: Text(
           'No kanji found in this word.',
           style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-            color: Theme.of(context).colorScheme.onSurfaceVariant,
-          ),
+                color: Theme.of(context).colorScheme.onSurfaceVariant,
+              ),
         ),
       );
     }
@@ -350,8 +355,7 @@ class _KanjiList extends StatelessWidget {
     final result = <String>[];
     for (final rune in text.runes) {
       final ch = String.fromCharCode(rune);
-      final isKanji =
-          (rune >= 0x4E00 && rune <= 0x9FFF) ||
+      final isKanji = (rune >= 0x4E00 && rune <= 0x9FFF) ||
           (rune >= 0x3400 && rune <= 0x4DBF) ||
           (rune >= 0xF900 && rune <= 0xFAFF);
       if (isKanji && !result.contains(ch)) {
@@ -369,23 +373,22 @@ class _Examples extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final query = word.kanji.trim().isNotEmpty
-        ? word.kanji.trim()
-        : word.kana.trim();
+    final query =
+        word.kanji.trim().isNotEmpty ? word.kanji.trim() : word.kana.trim();
     if (query.isEmpty) {
       return Padding(
         padding: const EdgeInsets.all(AppSizes.lg),
         child: Text(
           'No query available for examples.',
           style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-            color: Theme.of(context).colorScheme.onSurfaceVariant,
-          ),
+                color: Theme.of(context).colorScheme.onSurfaceVariant,
+              ),
         ),
       );
     }
 
     final examplesAsync = ref.watch(
-      wordExamplesProvider((query: query, limit: 6)),
+      wordExamplesProvider(query: query, limit: 6),
     );
 
     return examplesAsync.when(
@@ -398,8 +401,8 @@ class _Examples extends ConsumerWidget {
         child: Text(
           'Failed to load examples. Check your internet connection.',
           style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-            color: Theme.of(context).colorScheme.onSurfaceVariant,
-          ),
+                color: Theme.of(context).colorScheme.onSurfaceVariant,
+              ),
         ),
       ),
       data: (examples) {
@@ -409,8 +412,8 @@ class _Examples extends ConsumerWidget {
             child: Text(
               'No examples found.',
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                color: Theme.of(context).colorScheme.onSurfaceVariant,
-              ),
+                    color: Theme.of(context).colorScheme.onSurfaceVariant,
+                  ),
             ),
           );
         }
@@ -441,8 +444,8 @@ class _Examples extends ConsumerWidget {
                         examples[i].japanese,
                         textAlign: TextAlign.left,
                         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                          fontWeight: FontWeight.w700,
-                        ),
+                              fontWeight: FontWeight.w700,
+                            ),
                       ),
                     ),
                     const SizedBox(height: AppSizes.sm),
@@ -452,8 +455,10 @@ class _Examples extends ConsumerWidget {
                         examples[i].english,
                         textAlign: TextAlign.left,
                         style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          color: Theme.of(context).colorScheme.onSurfaceVariant,
-                        ),
+                              color: Theme.of(context)
+                                  .colorScheme
+                                  .onSurfaceVariant,
+                            ),
                       ),
                     ),
                   ],
@@ -473,8 +478,8 @@ class _Examples extends ConsumerWidget {
                 child: Text(
                   'Source: Tatoeba (CC BY 2.0 FR)',
                   style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                    color: Theme.of(context).colorScheme.onSurfaceVariant,
-                  ),
+                        color: Theme.of(context).colorScheme.onSurfaceVariant,
+                      ),
                 ),
               ),
             ),
